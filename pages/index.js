@@ -63,7 +63,7 @@ export default function Home() {
     <div className="page">
       <Head>
         <title>Cindy Park | Portfolio</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/logo.svg"></link>
+        <link rel="shortcut icon" type="image/x-icon" href="/logo3.svg"></link>
         <link
               rel="preload"
               href="/fonts/Kiona/Kiona-Regular.ttf"

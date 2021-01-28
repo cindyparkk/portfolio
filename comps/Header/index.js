@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import Menu from "comps/Menu";
 
+import Router from 'next/router';
+
 const Container = styled.div`
     // width: 100%;
     // display: flex;
@@ -36,6 +38,7 @@ const HeaderBox = styled.div`
 const MenuLogo = styled.div`
     padding-left: 2%;    
     flex: 4;
+    cursor: pointer;
 `;
 
 const Logo = styled.img`
@@ -43,6 +46,11 @@ const Logo = styled.img`
     height: auto;
 `;
 
+function clicktoHome() {
+    if (true){
+      Router.push("/");
+    }
+  }
 
 const Header = ({onAbout, onContact}) => {
     // const [expanded, setExpanded] = useState(false);
@@ -50,8 +58,8 @@ const Header = ({onAbout, onContact}) => {
 
     return <Container>
         <HeaderBox>
-            <MenuLogo>
-                <Logo src="/logo2.svg" />
+            <MenuLogo onClick={clicktoHome}>
+                <Logo src="/logo3.svg" />
             </MenuLogo>
             <Menu />
             {/* <Box>
