@@ -77,9 +77,7 @@ export default function Home() {
               crossOrigin=""
             />
       </Head>
-      <Header id="header" 
-      onAbout={clicktoAbout} onContact={clicktoContact}
-      />
+      <Header id="header" />
       <div className="page_title">
         <h1 id="title"></h1>
         <h1 id="title2"></h1>

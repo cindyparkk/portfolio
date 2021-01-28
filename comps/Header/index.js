@@ -43,41 +43,10 @@ const Logo = styled.img`
     height: auto;
 `;
 
-// const MenuItem = styled.h2`
-//     margin: 0px 2%;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     cursor: pointer;
-// `;
-
-// const Icon = styled.img`
-//     max-width: 20px;
-//     height: auto;
-//     margin: 5px 20px 0px 10px;
-// `;
-
-// const Expand = styled.div`
-//     // box-shadow: 0 5px 5px -5px #333,
-//     //             -5px 0 5px -5px #333, 
-//     //             5px 0 5px -5px #333;
-//     width: 190px;
-//     height: 216px;
-//     background-color: #fff;
-//     box-shadow: 0px 4px 25px 2px rgba(0, 0, 0, 0.2);
-//     z-index: 5;
-//     display: inline-flex;
-//     flex-direction: column;
-// `;
-
-const Box = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
 
 const Header = ({onAbout, onContact}) => {
-    const [expanded, setExpanded] = useState(false);
-    const[selected, setSelected] = useState();
+    // const [expanded, setExpanded] = useState(false);
+    // const[selected, setSelected] = useState();
 
     return <Container>
         <HeaderBox>
@@ -97,8 +66,6 @@ const Header = ({onAbout, onContact}) => {
 }
 
 Header.defaultProps = {
-    onAbout:()=>{},
-    onContact:()=>{}
 };
 
 export default Header;

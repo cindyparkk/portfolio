@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import styled, {css} from 'styled-components';
 
+import Router from 'next/router';
+
 const Container = styled.div`
     // width: 100%;
     display: flex;
@@ -87,6 +89,18 @@ const ExpandBox = styled.div`
     }
 `;
 
+function clicktoAbout() {
+    if (true){
+      Router.push("/about");
+    }
+  }
+  
+  function clicktoContact() {
+    if (true){
+      Router.push("/contact");
+    }
+  }
+
 const Menu = ({onAbout, onContact}) => {
     const [expanded, setExpanded] = useState(false);
     const[selected, setSelected] = useState();
@@ -119,8 +133,8 @@ const Menu = ({onAbout, onContact}) => {
                     </Option>
                 </Expand>
             </Box>
-            <MenuItem onClick={onAbout}>about</MenuItem>
-            <MenuItem onClick={onContact}>contact</MenuItem>
+            <MenuItem onClick={clicktoAbout}>about</MenuItem>
+            <MenuItem onClick={clicktoContact}>contact</MenuItem>
     </Container>
 }
 
