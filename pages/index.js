@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Header from "comps/Header";
 import Footer from "comps/Footer";
 import HomeInfo from "comps/HomeInfo";
-import Title from "comps/Title";
+import Menu from "comps/Menu";
 
 import Router from 'next/router';
 
