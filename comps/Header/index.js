@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
+import Menu from "comps/Menu";
+
+import Router from 'next/router';
 
 const Container = styled.div`
+    // width: 100%;
+    // display: flex;
+    // flex-direction: column;
     width: 100%;
-    min-height: 100px;
+    max-height: 100px;
     background-color: #fff;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
     display: flex;
@@ -11,56 +17,63 @@ const Container = styled.div`
     position: fixed;
     top: 0;
     transition: 0.2s;
+    z-index: 1;
+    box-sizing: border-box;
+`;
+
+const HeaderBox = styled.div`
+    width: 100%;
+    min-height: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    transition: 0.2s;
+    z-index: 1;
 `;
 
 const MenuLogo = styled.div`
     padding-left: 2%;    
     flex: 4;
-`;
-
-const Logo = styled.img`
-    max-width: 60px;
-    height: auto;
-`;
-
-const MenuItem = styled.h2`
-    margin: 0px 2%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     cursor: pointer;
 `;
 
-const Icon = styled.img`
-    max-width: 20px;
+const Logo = styled.img`
+    max-width: 85px;
     height: auto;
-    margin: 5px 20px 0px 10px;
 `;
 
-const Expand = styled.div`
-    // box-shadow: 0 5px 5px -5px #333,
-    //             -5px 0 5px -5px #333, 
-    //             5px 0 5px -5px #333;
-    max-width: 190px;
-    min-height: 216px;
-    background-color: #fff;
-    box-shadow: 0px 4px 25px 2px rgba(0, 0, 0, 0.2);
-`;
+function clicktoHome() {
+    if (true){
+      Router.push("/");
+    }
+  }
 
 const Header = ({onAbout, onContact}) => {
+    // const [expanded, setExpanded] = useState(false);
+    // const[selected, setSelected] = useState();
+
     return <Container>
-        <MenuLogo>
-            <Logo src="/logo.svg" />
-        </MenuLogo>
-        <MenuItem>work<Icon src="/down.svg"/></MenuItem>
-        <MenuItem onClick={onAbout}>about</MenuItem>
-        <MenuItem onClick={onContact}>contact</MenuItem>
+        <HeaderBox>
+            <MenuLogo onClick={clicktoHome}>
+                <Logo src="/logo3.svg" />
+            </MenuLogo>
+            <Menu />
+            {/* <Box>
+            <MenuItem onClick={()=>{setExpanded(!expanded);}}>
+                work<Icon expanded={expanded} src="/down.svg"/>
+            </MenuItem>
+            </Box>
+            <MenuItem onClick={onAbout}>about</MenuItem>
+            <MenuItem onClick={onContact}>contact</MenuItem> */}
+        </HeaderBox>
     </Container>
 }
 
 Header.defaultProps = {
-    onAbout:()=>{},
-    onContact:()=>{}
 };
 
 export default Header;

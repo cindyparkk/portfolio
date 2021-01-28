@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Header from "comps/Header";
 import Footer from "comps/Footer";
 import HomeInfo from "comps/HomeInfo";
-import Title from "comps/Title";
+import Menu from "comps/Menu";
 
 import Router from 'next/router';
 
@@ -63,7 +63,7 @@ export default function Home() {
     <div className="page">
       <Head>
         <title>Cindy Park | Portfolio</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/logo.svg"></link>
+        <link rel="shortcut icon" type="image/x-icon" href="/logo3.svg"></link>
         <link
               rel="preload"
               href="/fonts/Kiona/Kiona-Regular.ttf"
@@ -77,9 +77,7 @@ export default function Home() {
               crossOrigin=""
             />
       </Head>
-      <Header id="header" 
-      onAbout={clicktoAbout} onContact={clicktoContact}
-      />
+      <Header id="header" />
       <div className="page_title">
         <h1 id="title"></h1>
         <h1 id="title2"></h1>
