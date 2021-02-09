@@ -48,10 +48,14 @@ const Expand = styled.div`
     z-index: 5;
     flex-direction: column;
     margin-top: 5%;
-    display:${props=>props.expanded ? "inline-flex" : "hidden"};
+    display:${props=>props.expanded ? "inline-flex" : "none"};
     opacity:${props=>props.expanded ? 1 : 0};
     transition: height 0.5s;
     position: absolute;
+
+    &:hover {
+        // display:${props=>props.expanded ? "inline-flex" : "none"};
+    }
 `;
 
 const Option = styled.div`

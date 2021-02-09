@@ -83,8 +83,8 @@ export default function Home() {
         <h1 id="title2"></h1>
       </div>
       <HomeInfo />
-      <HomeInfo bgcolor="#8093F1" title="Adog'pt"/>
-      <HomeInfo bgcolor="#F28482" title="medTrack"/>
+      <HomeInfo bgcolor="#F28482" title="Adog'pt"/>
+      <HomeInfo bgcolor="#06719D" title="medTrack"/>
       <Footer />
     </div>
   )

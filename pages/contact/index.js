@@ -3,7 +3,7 @@ import Header from "comps/Header";
 import Footer from "comps/Footer";
 
 export default function Contact() {
-    return <div>
+    return <div className="page">
         <Header/>
         <Footer />
     </div>
