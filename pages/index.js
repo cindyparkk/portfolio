@@ -100,6 +100,7 @@ export default function Home() {
           Router.push("/adogpt");
         }
       }} bgcolor="#F28482" title="Adog'pt"
+      imgurl="adogpt.svg"
       text="A simple educational application for those who are interested in adopting a dog"/>
       <HomeInfo onClick={()=>{
         if(true){

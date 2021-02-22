@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Head from 'next/head'
 import Header from "comps/Header";
 import Footer from "comps/Footer";
+import Banner from "comps/Banner";
 
 export default function Campused() {
 
@@ -23,6 +24,14 @@ export default function Campused() {
             />
       </Head>
         <Header/>
+        <div className="content">
+        <h5 className="content_title" id="campused">camp<span>used</span></h5>
+        <Banner 
+        role2="lead front-end developer" 
+        role3=""
+        date="sept—dec 2020"
+        />
+      </div>
         <Footer />
     </div>
 }

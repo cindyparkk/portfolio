@@ -37,8 +37,28 @@
 
 #medtrack {
     color: #06719D;
-
     & > span {
         color: #094D69;
+    }
+}
+
+#campused {
+    color: #1F5A98;
+    & > span {
+        color: #EA7317;
+    }
+}
+
+#adogpt {
+    color: #EF9B89;
+    & > span {
+        color: #B0D0D3;
+    }
+}
+
+#petsave {
+    color: #000;
+    & > span {
+        color: #54BAF3;
     }
 }

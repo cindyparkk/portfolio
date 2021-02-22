@@ -18,7 +18,7 @@ const Container = styled.div`
 const InfoImage = styled.img`
     width: 30%;
     height: auto;
-    padding: 20px 20px 20px 0px;
+    padding: 20px 50px 20px 0px;
 `;
 
 const Box = styled.div`
