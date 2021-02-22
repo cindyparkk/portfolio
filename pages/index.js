@@ -29,41 +29,41 @@ function clicktoContact() {
 }
 
 export default function Home() {
-  var i = 0;
-  var text = "Hi, I'm Cindy,";
+  // var i = 0;
+  // var text = "Hi, I'm Cindy,";
 
-  function typeWriter() {
-    if (i < text.length) {
-      document.getElementById("title").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 100);
-    } 
-  }
+  // function typeWriter() {
+  //   if (i < text.length) {
+  //     document.getElementById("title").innerHTML += text.charAt(i);
+  //     i++;
+  //     setTimeout(typeWriter, 100);
+  //   } 
+  // }
 
-  useEffect(()=>{
-    typeWriter();
-  }, []);
+  // useEffect(()=>{
+  //   typeWriter();
+  // }, []);
 
-  var x= 0;
-  var text2 = "I code and design."
+  // var x= 0;
+  // var text2 = "I code and design."
 
-  function typeWriter2(){
-    if (x < text2.length) {
-      document.getElementById("title2").innerHTML += text2.charAt(x);
-      x++;
-      setTimeout(typeWriter2, 100);
-    } 
-  }
+  // function typeWriter2(){
+  //   if (x < text2.length) {
+  //     document.getElementById("title2").innerHTML += text2.charAt(x);
+  //     x++;
+  //     setTimeout(typeWriter2, 100);
+  //   } 
+  // }
 
-  setTimeout(()=>{
-    typeWriter2();
-  }, 2000);
+  // setTimeout(()=>{
+  //   typeWriter2();
+  // }, 2000);
 
   return (
     <div className="page">
       <Head>
         <title>Cindy Park | Portfolio</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/logo3.svg"></link>
+        <link rel="shortcut icon" type="image/x-icon" href="/logo-new.svg"></link>
         <link
               rel="preload"
               href="/fonts/Kiona/Kiona-Regular.ttf"
@@ -81,6 +81,13 @@ export default function Home() {
       <div className="page_title">
         <h1 id="title"></h1>
         <h1 id="title2"></h1>
+      </div>
+      <div className="page_down">
+        <h2>see work</h2>
+        <img src="/down.svg" />
+      </div>
+      <div className="page_left">
+        <h2>my recent work</h2>
       </div>
       <HomeInfo onClick={()=>{
         if(true){

@@ -10,7 +10,7 @@ const Container = styled.div`
 const ButtonBox = styled.button`
     min-height: 60px;
     width: 40%;
-    background-color: ${props=>props.bgcolor ? props.bgcolor : "#8093F1"};
+    background-color: ${props=>props.bgcolor ? props.bgcolor : "#f28482"};
     color: #fff;
     border-radius: 2px;
     border: ${props=>props.border ? props.border : "none"};

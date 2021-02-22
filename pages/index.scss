@@ -9,6 +9,22 @@
     }
 }
 
+.page_down {
+    @include flexIt();
+
+    & > img {
+        max-width: 60px;
+        height: auto;
+    }
+}
+
+.page_left {
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
 .contact {
     align-items: flex-start;
 }

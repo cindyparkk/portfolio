@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Button from "comps/Button";
 
 const Container = styled.div`
-    min-width: 70%;
-    max-width: 85%;
+    min-width: 60%;
+    max-width: 75%;
     min-height: 320px;
     display: flex;
     background-color: ${props=>props.bgcolor ? props.bgcolor : "#F89C55"};
@@ -13,6 +13,11 @@ const Container = styled.div`
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
     padding:0px 20px 0px 20px;
     margin-top: 20px;
+
+    &:hover {
+        transform: scale(1.01);
+        transition: transform 0.5s;
+    }
 `;
 
 const InfoImage = styled.img`
