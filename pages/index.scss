@@ -14,18 +14,20 @@
 }
 
 .contact_content {
-    padding-left: 30px;
+    padding: 0px 30px;
 
     & > h5 {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        color: #272834;
     }
+
+}
+
+.page_button {
+    margin-top: 20px;
+}
 
 #blockColorblindContent {
     display: none;
 
 }
-
-// #about {
-//     position: absolute;
-//     right: -100%;
-// }
