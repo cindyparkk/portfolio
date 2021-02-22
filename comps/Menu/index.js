@@ -122,21 +122,33 @@ const Menu = ({onAbout, onContact}) => {
                 <Expand expanded={expanded}>
                     <Option selected={selected === 1} onClick={() => {
                     setSelected(1);
+                    if(true){
+                        Router.push("/campused");
+                      }
                     }}>
                         <h2>campused</h2>
                     </Option>
                     <Option selected={selected === 2} onClick={() => {
                     setSelected(2);
+                    if(true){
+                        Router.push("/medtrack");
+                      }
                     }}>
                         <h2>medTrack</h2>
                     </Option>
                     <Option elected={selected === 3} onClick={() => {
                     setSelected(3);
+                    if(true){
+                        Router.push("/adogpt");
+                      }
                     }}>
                         <h2>adog'pt</h2>
                     </Option>
                     <Option elected={selected === 4} onClick={() => {
                     setSelected(4);
+                    if(true){
+                        Router.push("/petsave");
+                      }
                     }}>
                         <h2>petsave</h2>
                     </Option>

@@ -82,10 +82,26 @@ export default function Home() {
         <h1 id="title"></h1>
         <h1 id="title2"></h1>
       </div>
-      <HomeInfo />
-      <HomeInfo bgcolor="#06719D" title="medTrack"/>
-      <HomeInfo bgcolor="#F28482" title="Adog'pt"/>
-      <HomeInfo bgcolor="#000" title="petSave"/>
+      <HomeInfo onClick={()=>{
+        if(true){
+          Router.push("/campused");
+        }
+      }}/>
+      <HomeInfo onClick={()=>{
+        if(true){
+          Router.push("/medtrack");
+        }
+      }} bgcolor="#06719D" title="medTrack"/>
+      <HomeInfo onClick={()=>{
+        if(true){
+          Router.push("/adogpt");
+        }
+      }} bgcolor="#F28482" title="Adog'pt"/>
+      <HomeInfo onClick={()=>{
+        if(true){
+          Router.push("/petsave");
+        }
+      }} bgcolor="#000" title="petSave"/>
       <Footer />
     </div>
   )
