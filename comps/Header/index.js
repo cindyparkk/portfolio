@@ -43,8 +43,13 @@ const MenuLogo = styled.div`
 `;
 
 const Logo = styled.img`
-    max-width: 85px;
+    max-width: 65px;
     height: auto;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s;
+    }
 `;
 
 function clicktoHome() {
@@ -60,7 +65,7 @@ const Header = ({onAbout, onContact}) => {
     return <Container>
         <HeaderBox>
             <MenuLogo onClick={clicktoHome}>
-                <Logo src="/logo3.svg" />
+                <Logo src="/logo-new.svg" />
             </MenuLogo>
             <Menu />
             {/* <Box>
