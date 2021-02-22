@@ -5,7 +5,7 @@ const Container = styled.div`
     min-width: 70%;
     min-height: 320px;
     display: flex;
-    background-color: ${props=>props.bgcolor ? props.bgcolor : "#C197D4"};
+    background-color: ${props=>props.bgcolor ? props.bgcolor : "#F89C55"};
     align-items: center;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
     padding:0px 2% 0px 2%;

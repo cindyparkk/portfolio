@@ -124,12 +124,17 @@ const Menu = ({onAbout, onContact}) => {
                     <Option selected={selected === 2} onClick={() => {
                     setSelected(2);
                     }}>
-                        <h2>adog'pt</h2>
+                        <h2>medTrack</h2>
                     </Option>
                     <Option elected={selected === 3} onClick={() => {
                     setSelected(3);
                     }}>
-                        <h2>medtrack</h2>
+                        <h2>adog'pt</h2>
+                    </Option>
+                    <Option elected={selected === 4} onClick={() => {
+                    setSelected(4);
+                    }}>
+                        <h2>petsave</h2>
                     </Option>
                 </Expand>
             </Box>
