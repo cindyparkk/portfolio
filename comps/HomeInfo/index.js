@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from "comps/Button";
 
 const Container = styled.div`
     min-width: 70%;
@@ -16,7 +17,6 @@ const InfoImage = styled.img``;
 
 const Box = styled.div`
     @include flexIt();
-
 `;
 
 const InfoTitle = styled.h5`
@@ -30,19 +30,27 @@ const InfoText = styled.p`
     text-align: center;
 `;
 
+const Bottom = styled.div`
+    // align-items: flex-end;
+    width: 100%;
+`;
+
 const HomeInfo = ({bgcolor, imgurl, title, text}) => {
     return <Container bgcolor={bgcolor}>
         <InfoImage src={imgurl}/>
         <Box>
             <InfoTitle>{title}</InfoTitle>
             <InfoText>{text}</InfoText>
+            <Bottom>
+                <Button border="5px solid #fff" bgcolor="transparent" title="view more"/>
+            </Bottom>
         </Box>
     </Container>
 }
 
 HomeInfo.defaultProps = {
     bgcolor: null,
-    imgulr: null,
+    imgurl: null,
     title: "campused",
     text:"a smart solution for affordable furniture for students living on campus"
 };

@@ -4,30 +4,32 @@ import styled, {css} from 'styled-components';
 import Router from 'next/router';
 
 const Container = styled.div`
-    min-width: 120px;
+    min-width: 150px;
 `;
 
 const ButtonBox = styled.button`
     min-height: 60px;
     width: 40%;
-    background-color: #272834;
+    background-color: ${props=>props.bgcolor ? props.bgcolor : "#272834"};
     color: #fff;
     border-radius: 2px;
-    border: none;
+    border: ${props=>props.border ? props.border : "none"};
     font-family: "GMarketSans";
     font-size: 18px;
     text-transform: uppercase;
 `;
 
 
-const Button = ({title}) => {
+const Button = ({title, bgcolor, border}) => {
     return <Container>
-        <ButtonBox>{title}</ButtonBox>
+        <ButtonBox bgcolor={bgcolor} border={border}>{title}</ButtonBox>
     </Container>
 }
 
 Button.defaultProps = {
-    title: "submit"
+    title: "send",
+    bgcolor: null,
+    border: null
 };
 
 export default Button;
