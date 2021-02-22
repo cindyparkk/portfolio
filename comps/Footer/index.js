@@ -47,7 +47,7 @@ const FooterEmail = styled.div`
     }
 `;
 
-const Email = styled.h3`
+const Email = styled.h6`
     color: #272834;
     // flex: 4;
     cursor: pointer;
@@ -66,7 +66,7 @@ const Links = styled.div`
     }
 `;
 
-const Resume = styled.h3`
+const Resume = styled.h6`
     cursor: pointer;
 `;
 

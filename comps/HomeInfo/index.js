@@ -4,22 +4,26 @@ import Button from "comps/Button";
 
 const Container = styled.div`
     min-width: 70%;
+    max-width: 85%;
     min-height: 320px;
     display: flex;
     background-color: ${props=>props.bgcolor ? props.bgcolor : "#F89C55"};
     align-items: center;
+    justify-items: flex-end;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
-    padding:0px 2% 0px 2%;
-    margin-top: 2%;
+    padding:0px 20px 0px 20px;
+    margin-top: 20px;
 `;
 
 const InfoImage = styled.img`
-    width: 35%;
+    width: 30%;
     height: auto;
+    padding: 20px 20px 20px 0px;
 `;
 
 const Box = styled.div`
     @include flexIt();
+    max-width: 60%;
 `;
 
 const InfoTitle = styled.h5`
@@ -28,9 +32,11 @@ const InfoTitle = styled.h5`
 `;
 
 const InfoText = styled.p`
-    max-width: 333px;
+    // max-width: 333px;
     color: #fff;
-    text-align: center;
+    // text-align: center;
+    width: 100%;
+    margin-right: 0;
 `;
 
 const Bottom = styled.div`
@@ -55,7 +61,7 @@ HomeInfo.defaultProps = {
     bgcolor: null,
     imgurl: null,
     title: "campused",
-    text:"a smart solution for affordable furniture for students living on campus",
+    text:"A smart solution for affordable furniture for students living on campus",
     onClick:()=>{}
 };
 

@@ -123,18 +123,18 @@ const Menu = ({onAbout, onContact}) => {
                     <Option selected={selected === 1} onClick={() => {
                     setSelected(1);
                     if(true){
-                        Router.push("/campused");
-                      }
-                    }}>
-                        <h2>campused</h2>
-                    </Option>
-                    <Option selected={selected === 2} onClick={() => {
-                    setSelected(2);
-                    if(true){
                         Router.push("/medtrack");
                       }
                     }}>
                         <h2>medTrack</h2>
+                    </Option>
+                    <Option selected={selected === 2} onClick={() => {
+                    setSelected(2);
+                    if(true){
+                        Router.push("/campused");
+                      }
+                    }}>
+                        <h2>campused</h2>
                     </Option>
                     <Option elected={selected === 3} onClick={() => {
                     setSelected(3);
