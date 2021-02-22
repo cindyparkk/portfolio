@@ -15,12 +15,11 @@
 
 .contact_content {
     padding: 0px 30px;
+}
 
-    & > h5 {
-        margin-bottom: 30px;
-        color: #272834;
-    }
-
+.content_title {
+    margin-bottom: 30px;
+    color: #272834;
 }
 
 .page_button {
@@ -30,4 +29,16 @@
 #blockColorblindContent {
     display: none;
 
+}
+
+.content {
+    width: 100%;
+}
+
+#medtrack {
+    color: #06719D;
+
+    & > span {
+        color: #094D69;
+    }
 }

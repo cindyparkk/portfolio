@@ -25,7 +25,7 @@ export default function Contact() {
         </Head>
         <Header/>
         <div className="contact_content">
-            <h5>Let's get in touch:</h5>
+            <h5 className="content_title">Let's get in touch:</h5>
             <Input />
             <div className="page_button">
                 <Button />

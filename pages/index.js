@@ -84,24 +84,29 @@ export default function Home() {
       </div>
       <HomeInfo onClick={()=>{
         if(true){
+          Router.push("/medtrack");
+        }
+      }} bgcolor="#094D69" title="medTrack"
+      imgurl="/medtrack.svg"
+      text="A medication tracker application for patients with Alzheimer's"/>
+      <HomeInfo 
+      onClick={()=>{
+        if(true){
           Router.push("/campused");
         }
       }}/>
       <HomeInfo onClick={()=>{
         if(true){
-          Router.push("/medtrack");
-        }
-      }} bgcolor="#06719D" title="medTrack"/>
-      <HomeInfo onClick={()=>{
-        if(true){
           Router.push("/adogpt");
         }
-      }} bgcolor="#F28482" title="Adog'pt"/>
+      }} bgcolor="#F28482" title="Adog'pt"
+      text="A simple educational application for those who are interested in adopting a dog"/>
       <HomeInfo onClick={()=>{
         if(true){
           Router.push("/petsave");
         }
-      }} bgcolor="#000" title="petSave"/>
+      }} bgcolor="#000" title="petSave"
+      text="A new social media platform for individual animal rescuers and animal rescue organizations"/>
       <Footer />
     </div>
   )

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Head from 'next/head'
 import Header from "comps/Header";
 import Footer from "comps/Footer";
+import Banner from "comps/Banner";
 
 export default function Medtrack() {
 
@@ -23,6 +24,10 @@ export default function Medtrack() {
             />
       </Head>
       <Header/>
+      <div className="content">
+        <h5 className="content_title" id="medtrack">med<span>Track</span></h5>
+        <Banner />
+      </div>
       <Footer />
     </div>
 }
