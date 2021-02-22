@@ -13,7 +13,10 @@ const Container = styled.div`
     margin-top: 2%;
 `;
 
-const InfoImage = styled.img``;
+const InfoImage = styled.img`
+    width: 35%;
+    height: auto;
+`;
 
 const Box = styled.div`
     @include flexIt();
@@ -35,14 +38,14 @@ const Bottom = styled.div`
     width: 100%;
 `;
 
-const HomeInfo = ({bgcolor, imgurl, title, text}) => {
+const HomeInfo = ({bgcolor, imgurl, title, text, onClick}) => {
     return <Container bgcolor={bgcolor}>
         <InfoImage src={imgurl}/>
         <Box>
             <InfoTitle>{title}</InfoTitle>
             <InfoText>{text}</InfoText>
             <Bottom>
-                <Button border="5px solid #fff" bgcolor="transparent" title="view more"/>
+                <Button border="5px solid #fff" bgcolor="transparent" title="view more" onClick={onClick}/>
             </Bottom>
         </Box>
     </Container>
@@ -52,7 +55,8 @@ HomeInfo.defaultProps = {
     bgcolor: null,
     imgurl: null,
     title: "campused",
-    text:"a smart solution for affordable furniture for students living on campus"
+    text:"a smart solution for affordable furniture for students living on campus",
+    onClick:()=>{}
 };
 
 export default HomeInfo;
