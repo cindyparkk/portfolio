@@ -9,6 +9,18 @@
     }
 }
 
+.contact {
+    align-items: flex-start;
+}
+
+.contact_content {
+    padding-left: 30px;
+
+    & > h5 {
+        margin-bottom: 50px;
+    }
+}
+
 // #about {
 //     position: absolute;
 //     right: -100%;

@@ -9,14 +9,14 @@ const Container = styled.div`
     // bottom: 0;
     display: flex;
     align-items: center;
-    padding-right: 40px;
-    margin-top: 80px;
+    // padding-right: 40px;
+    margin-top: 30px;
 `;
 
 const FooterEmail = styled.div`
-    padding-left: 40px;
+    padding: 0px 30px;
     flex: 4;
-    padding-top: 20px;
+    // padding-top: 20px;
     display: flex;
     justify-content: space-between;
 `;

@@ -19,7 +19,7 @@ const Box = styled.div`
 
 `;
 
-const InfoTitle = styled.h4`
+const InfoTitle = styled.h5`
     color: #fff;
     margin: 0;
 `;
