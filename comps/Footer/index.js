@@ -29,17 +29,16 @@ const Container = styled.div`
     // bottom: 0;
     display: flex;
     align-items: center;
-    padding-right: 3%;
-    margin-top: 8%;
+    // padding-right: 40px;
+    margin-top: 30px;
 `;
 
 const FooterEmail = styled.div`
-    padding-left: 40px;
+    padding: 0px 30px;
     flex: 4;
-    padding-top: 20px;
+    // padding-top: 20px;
     display: flex;
     justify-content: space-between;
-
      h3 {
         &:hover {
             color: #b0b0b0;
@@ -59,6 +58,7 @@ const Links = styled.div`
     align-items: center;
 
     & > div > img {
+
         width: 25px;
         height: auto;
         padding-left: 5px;

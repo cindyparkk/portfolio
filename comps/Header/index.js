@@ -11,7 +11,7 @@ const Container = styled.div`
     width: 100%;
     max-height: 100px;
     background-color: #fff;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    // box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     position: fixed;
@@ -25,7 +25,8 @@ const HeaderBox = styled.div`
     width: 100%;
     min-height: 100px;
     background-color: #fff;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    // box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    // add this when scrolled down
     display: flex;
     align-items: center;
     justify-content: space-around;

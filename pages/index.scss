@@ -9,8 +9,20 @@
     }
 }
 
+.contact {
+    align-items: flex-start;
+}
+
+.contact_content {
+    padding-left: 30px;
+
+    & > h5 {
+        margin-bottom: 50px;
+    }
+
 #blockColorblindContent {
     display: none;
+
 }
 
 // #about {
