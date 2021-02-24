@@ -9,7 +9,7 @@ export default function Adogpt() {
     return <div className="page">
         <Head>
         <title>Adog'pt | Cindy Park</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/logo3.svg"></link>
+        <link rel="shortcut icon" type="image/x-icon" href="/logo-c.svg"></link>
         <link
               rel="preload"
               href="/fonts/Kiona/Kiona-Regular.ttf"
