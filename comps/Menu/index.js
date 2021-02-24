@@ -47,7 +47,7 @@ const Expand = styled.div`
     box-shadow: 0px 4px 25px 2px rgba(0, 0, 0, 0.2);
     z-index: 5;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 40px;
     display:${props=>props.expanded ? "inline-flex" : "none"};
     opacity:${props=>props.expanded ? 1 : 0};
     transition: height 0.5s;
@@ -63,13 +63,13 @@ const Option = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: ${props=>props.selected ? "#8093F1" : "#fff"};
+    background-color: ${props=>props.selected ? "#272834" : "#fff"};
     padding: 0px 15px;
     cursor: pointer;
-    color: ${props=>props.selected ? "#fff" : "#000"};
+    color: ${props=>props.selected ? "#fff" : "#272834"};
 
     &:hover {
-        background-color: #8093F1;
+        background-color: #272834;
         color: #fff;
     }
 `;

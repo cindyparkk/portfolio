@@ -4,14 +4,14 @@ import Button from "comps/Button";
 
 const Container = styled.div`
     min-width: 60%;
-    max-width: 75%;
+    // max-width: 75%;
     min-height: 320px;
     display: flex;
     background-color: ${props=>props.bgcolor ? props.bgcolor : "#F89C55"};
     align-items: center;
     justify-items: flex-end;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
-    padding:0px 20px 0px 20px;
+    padding: 20px;
     margin-top: 20px;
 
     &:hover {
@@ -28,12 +28,13 @@ const InfoImage = styled.img`
 
 const Box = styled.div`
     @include flexIt();
-    max-width: 60%;
+    max-width: 400px;
 `;
 
 const InfoTitle = styled.h5`
     color: #fff;
     margin: 0;
+    // max-width: 60%;
 `;
 
 const InfoText = styled.p`
