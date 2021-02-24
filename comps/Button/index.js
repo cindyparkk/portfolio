@@ -4,12 +4,12 @@ import styled, {css} from 'styled-components';
 import Router from 'next/router';
 
 const Container = styled.div`
-    min-width: 150px;
+    
 `;
 
 const ButtonBox = styled.button`
     min-height: 60px;
-    width: 40%;
+    min-width: 150px;
     background-color: ${props=>props.bgcolor ? props.bgcolor : "#f28482"};
     color: #fff;
     border-radius: 2px;
