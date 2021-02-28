@@ -8,13 +8,13 @@ const Container = styled.div`
     min-height: 200px;
     background-color: #F4F5F5;
     display: flex;
-    padding: 25px 0px;
+    padding: 15px 0px;
 `;
 
 const Left = styled.div`
     flex: 2;
     // background-color: #dad;
-    margin: 0px 30px;
+    margin: 0px 50px 0px 30px;
     // width: 45%;
 `;
 
@@ -27,12 +27,17 @@ const Right = styled.div`
 
 const Title = styled.h3`
     text-transform: capitalize;
-    margin: 10px 0px 10px 15px;
+    margin: 35px 0px 20px 15px;
 `;
 
 const Text = styled.h6`
-    margin: 5px 0px 5px 15px;
-    text-transform: capitalize;
+    margin: 5px 50px 10px 15px;
+    line-height: 1.75;
+`;
+
+const DefText = styled.p`
+    margin: 5px 50px 10px 15px;
+    line-height: 1.75;
 `;
 
 const HR = styled.hr`
@@ -42,10 +47,14 @@ const HR = styled.hr`
     margin: 20px 0px;
 `;
 
-const Banner = ({title1, title2, role1, role2, role3, date}) => {
+const Banner = ({title1, title2, title3, role1, role2, role3, date, overview, lang1, lang2}) => {
     return <Container >
         <Left>
             <Title>{title1}</Title>
+            <DefText>{overview}</DefText>
+            <Title>{title3}</Title>
+            <Text>{lang1}</Text>
+            <Text>{lang2}</Text>
         </Left>
         <Right>
             <Title>{title2}</Title>
@@ -60,11 +69,15 @@ const Banner = ({title1, title2, role1, role2, role3, date}) => {
 
 Banner.defaultProps = {
     title1: "overview",
+    overview:"",
     title2:"role",
-    role1:"project manager",
-    role2:"lead developer",
-    role3:"lead UI designer",
-    date:"jan—feb 2021"
+    role1:"Project Manager",
+    role2:"Lead Developer",
+    role3:"Lead UI Designer, User Research, Prototyping & Testing",
+    date:"Jan—Feb 2021",
+    title3:"language",
+    lang1:"Create React App",
+    lang2:"mySQL, Express"
 };
 
 export default Banner;

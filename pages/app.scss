@@ -87,3 +87,8 @@ p {
     line-height: 1.2em;
     font-weight: 300;
 }
+
+::selection{
+    color: #fff;
+    background: #272834;
+}

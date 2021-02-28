@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from "comps/Header";
 import Footer from "comps/Footer";
 import Banner from "comps/Banner";
+import TopBanner from "comps/TopBanner";
 
 export default function Medtrack() {
 
@@ -25,8 +26,12 @@ export default function Medtrack() {
       </Head>
       <Header/>
       <div className="content">
-        <h5 className="content_title" id="medtrack">med<span>Track</span></h5>
-        <Banner />
+        <TopBanner 
+        imgurl="/medtrack-banner.svg" 
+        bgcolor="#094D69"/>
+        <Banner 
+        overview="A team of 4 front-end developers and designers created a mobile medication tracker for patients diagnosed with the Alzheimer’s disease. This app’s functions include tracking medication usage, which pill to intake at a particular time of the day, along with displaying a variety of information about that medication."
+        />
       </div>
       <Footer />
     </div>
