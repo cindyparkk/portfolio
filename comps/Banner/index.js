@@ -8,19 +8,18 @@ const Container = styled.div`
     min-height: 200px;
     background-color: #F4F5F5;
     display: flex;
-    padding: 15px 0px;
+    padding: 15px 50px;
 `;
 
 const Left = styled.div`
     flex: 2;
     // background-color: #dad;
-    margin: 0px 50px 0px 30px;
+    margin: 0px 20px 0px 0px;
     // width: 45%;
 `;
 
 const Right = styled.div`
     flex: 1;
-    margin-right: 30px;
     display: flex;
     flex-direction: column;
 `;

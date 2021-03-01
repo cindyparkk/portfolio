@@ -32,6 +32,8 @@ const Box = styled.div`
 `;
 
 const InfoTitle = styled.h5`
+    font-family: "GMarketSansBold";
+    font-size: 45px;
     color: #fff;
     margin: 0;
     // max-width: 60%;

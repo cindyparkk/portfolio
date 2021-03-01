@@ -57,6 +57,15 @@
     width: 100%;
 }
 
+.content_flexbox {
+    display: flex;
+    padding: 20px 50px;
+
+    & > div {
+        flex: 1;
+    }
+}
+
 #campused {
     color: #1F5A98;
     & > span {

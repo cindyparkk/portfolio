@@ -14,7 +14,7 @@ const ButtonBox = styled.button`
     color: #fff;
     border-radius: 2px;
     border: ${props=>props.border ? props.border : "none"};
-    font-family: "GMarketSans";
+    font-family: "GMarketSansBold";
     font-size: 18px;
     text-transform: uppercase;
     cursor: pointer;
