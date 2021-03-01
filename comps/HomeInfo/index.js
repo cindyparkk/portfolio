@@ -7,7 +7,7 @@ const Container = styled.div`
     // max-width: 75%;
     min-height: ${props=>props.width ? "auto" : "320px"};
     display: flex;
-    background-color: ${props=>props.bgcolor ? props.bgcolor : "#F89C55"};
+    background-color: ${props=>props.bgcolor ? props.bgcolor : "#73BFB8"};
     align-items: center;
     justify-items: flex-end;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
@@ -23,7 +23,8 @@ const Container = styled.div`
 const InfoImage = styled.img`
     width: 30%;
     height: auto;
-    padding: 20px 50px 20px 0px;
+    // padding: 20px 50px 20px 0px;
+    padding: ${props=>props.padding ? props.padding : "20px 50px 20px 0px"};
 `;
 
 const Box = styled.div`
@@ -53,9 +54,9 @@ const Bottom = styled.div`
     margin-top: 30px;
 `;
 
-const HomeInfo = ({bgcolor, imgurl, title, text, onClick, width}) => {
+const HomeInfo = ({bgcolor, imgurl, title, text, onClick, width, padding}) => {
     return <Container bgcolor={bgcolor} width={width}>
-        <InfoImage src={imgurl}/>
+        <InfoImage src={imgurl} padding={padding}/>
         <Box>
             <InfoTitle>{title}</InfoTitle>
             {text ? <InfoText>{text}</InfoText> : null}
@@ -72,7 +73,8 @@ HomeInfo.defaultProps = {
     title: "campused",
     text:null,
     onClick:()=>{},
-    width: null
+    width: null,
+    padding: null
 };
 
 export default HomeInfo;

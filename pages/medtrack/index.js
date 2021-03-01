@@ -36,6 +36,7 @@ export default function Medtrack() {
         bgcolor="#094D69"/>
         <Banner 
         overview="A team of 4 front-end developers and designers created a mobile medication tracker for patients diagnosed with the Alzheimer’s disease. This app’s functions include tracking medication usage, which pill to intake at a particular time of the day, along with displaying a variety of information about that medication."
+        role3="Lead UI Designer, User Research, Prototyping &amp; Testing"
         />
         <Content 
         left="50px" right="50px"
@@ -113,12 +114,23 @@ export default function Medtrack() {
         </div>
         <div className="content_flexbox more">
           <HomeInfo 
+            width="20%" 
+            onClick={()=>{
+          if(true){
+            Router.push("/petsave");
+          }
+           }} 
+           bgcolor="#231f20" title="petSave"
+           imgurl="/petsave.svg"/>
+          <HomeInfo 
           width="20%" 
+          padding="20px 20px 20px 0px"
           onClick={()=>{
             if(true){
               Router.push("/campused");
             }
           }}
+          imgurl="/campused.svg"
           />
           <HomeInfo 
           width="20%"
@@ -128,13 +140,6 @@ export default function Medtrack() {
             }
           }} bgcolor="#F28482" title="Adog'pt"
           imgurl="adogpt.svg"/>
-          <HomeInfo 
-          width="20%" 
-          onClick={()=>{
-        if(true){
-          Router.push("/petsave");
-        }
-      }} bgcolor="#000" title="petSave"/>
         </div>
       </div>
       <Footer />

@@ -3,23 +3,35 @@
 }
 
 .page_title {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 150px 0px;
     h1 {
         margin: 0;
     }
+    transform: none;
 }
 
 .page_down {
     @include flexIt();
+    // position: sticky;
+    // margin-top: 200px;
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
 
     & > img {
         max-width: 60px;
         height: auto;
         cursor: pointer;
-        &:hover {
-            transform: scale(1.1);
-            transition: transform 0.5s;
-        }
+        // &:hover {
+        //     transform: scale(1.1);
+        //     transition: transform 0.5s;
+        // }
     }
 }
 

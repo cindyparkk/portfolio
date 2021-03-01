@@ -59,7 +59,7 @@ const Banner = ({title1, title2, title3, role1, role2, role3, date, overview, la
             <Title>{title2}</Title>
             <Text>{role1}</Text>
             <Text>{role2}</Text>
-            <Text>{role3}</Text>
+            {role3 ? <Text>{role3}</Text> : null}
             <HR></HR>
             <Text>{date}</Text>
         </Right>
@@ -70,9 +70,9 @@ Banner.defaultProps = {
     title1: "overview",
     overview:"",
     title2:"role",
-    role1:"Project Manager",
+    role1:"Team Leader",
     role2:"Lead Developer",
-    role3:"Lead UI Designer, User Research, Prototyping & Testing",
+    role3:null,
     date:"Jan—Feb 2021",
     title3:"language",
     lang1:"Create React App",
