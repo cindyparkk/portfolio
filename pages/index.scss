@@ -60,6 +60,17 @@
 .content_flexbox {
     display: flex;
     padding: 20px 50px;
+    align-items: center;
+
+    & > div {
+        flex: 1;
+    }
+}
+
+.content_flexbox_box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
 
     & > div {
         flex: 1;
@@ -84,5 +95,11 @@
     color: #000;
     & > span {
         color: #54BAF3;
+    }
+}
+
+.more {
+    & > * {
+        margin: 0px 15px;
     }
 }

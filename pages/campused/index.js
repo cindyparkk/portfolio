@@ -25,11 +25,10 @@ export default function Campused() {
       </Head>
         <Header/>
         <div className="content">
-        <h5 className="content_title" id="campused">camp<span>used</span></h5>
         <Banner 
-        role2="lead front-end developer" 
+        role2="Lead Front-end developer" 
         role3=""
-        date="sept—dec 2020"
+        date="Sept—Dec 2020"
         />
       </div>
         <Footer />

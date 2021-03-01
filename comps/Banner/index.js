@@ -8,7 +8,7 @@ const Container = styled.div`
     min-height: 200px;
     background-color: #F4F5F5;
     display: flex;
-    padding: 15px 50px;
+    padding: 15px 50px 30px 50px;
 `;
 
 const Left = styled.div`

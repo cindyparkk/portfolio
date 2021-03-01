@@ -101,7 +101,9 @@ export default function Home() {
         if(true){
           Router.push("/campused");
         }
-      }}/>
+      }}
+      text="A smart solution for affordable furniture for students living on campus"
+      />
       <HomeInfo onClick={()=>{
         if(true){
           Router.push("/adogpt");

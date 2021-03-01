@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import Button from "comps/Button";
 
 const Container = styled.div`
-    min-width: 60%;
+    min-width: ${props=>props.width ? props.width : "60%"};
     // max-width: 75%;
-    min-height: 320px;
+    min-height: ${props=>props.width ? "auto" : "320px"};
     display: flex;
     background-color: ${props=>props.bgcolor ? props.bgcolor : "#F89C55"};
     align-items: center;
@@ -50,16 +50,17 @@ const InfoText = styled.p`
 const Bottom = styled.div`
     // align-items: flex-end;
     width: 100%;
+    margin-top: 30px;
 `;
 
-const HomeInfo = ({bgcolor, imgurl, title, text, onClick}) => {
-    return <Container bgcolor={bgcolor}>
+const HomeInfo = ({bgcolor, imgurl, title, text, onClick, width}) => {
+    return <Container bgcolor={bgcolor} width={width}>
         <InfoImage src={imgurl}/>
         <Box>
             <InfoTitle>{title}</InfoTitle>
-            <InfoText>{text}</InfoText>
+            {text ? <InfoText>{text}</InfoText> : null}
             <Bottom>
-                <Button border="5px solid #fff" bgcolor="transparent" title="view more" onClick={onClick}/>
+                <Button border="5px solid #fff" bgcolor="transparent" title="view project" onClick={onClick}/>
             </Bottom>
         </Box>
     </Container>
@@ -69,8 +70,9 @@ HomeInfo.defaultProps = {
     bgcolor: null,
     imgurl: null,
     title: "campused",
-    text:"A smart solution for affordable furniture for students living on campus",
-    onClick:()=>{}
+    text:null,
+    onClick:()=>{},
+    width: null
 };
 
 export default HomeInfo;

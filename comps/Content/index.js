@@ -3,7 +3,11 @@ import styled, {keyframes} from 'styled-components';
 
 const Container = styled.div`
     display: flex;
-    padding: 20px 50px;
+    // padding: 20px 50px;
+    padding-top: ${props=>props.top ? props.top : "20px"};
+    padding-bottom: ${props=>props.bottom ? props.bottom : "20px"};
+    padding-left: ${props=>props.left ? props.left : "0px"};
+    padding-right: ${props=>props.right ? props.right : "00px"};
     background-color: ${props=>props.bgcolor ? props.bgcolor : "#fff"};
 `;
 
@@ -23,8 +27,8 @@ const List = styled.ul`
     display: ${props=>props.display ? props.display : "none"};
 `;
 
-const Content = ({title, text, bgcolor, display, item1, item2, item3, item4, item5, item6}) => {
-    return <Container bgcolor={bgcolor}>
+const Content = ({title, text, bgcolor, display, item1, item2, item3, item4, item5, item6, left, right, top , bottom}) => {
+    return <Container bgcolor={bgcolor} left={left} right={right} top={top} bottom={bottom}>
         <Right>
             <Title>{title}</Title>
             <Text>{text}</Text>
@@ -52,7 +56,11 @@ Content.defaultProps = {
     item3: "",
     item4: "",
     item5: "",
-    item6: ""
+    item6: "",
+    left: null,
+    right: null,
+    top: null,
+    bottom: null
 };
 
 export default Content;
