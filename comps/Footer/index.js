@@ -51,6 +51,21 @@ const Email = styled.h6`
     color: #272834;
     // flex: 4;
     cursor: pointer;
+    font-family:"Lato";    
+    font-weight: 700;
+    padding: 5px;
+
+    &:hover {
+        background-color: #FEC601;
+    }
+`;
+
+const Box = styled.div`
+    display: flex;
+    align-items: center;
+    & > * {
+        margin-right: 15px;
+    }
 `;
 
 const Links = styled.div`
@@ -73,7 +88,11 @@ const Resume = styled.h6`
 const Footer = ({}) => {
     return <Container>
         <FooterEmail>
-            <Email onClick={clickEmail}>contact@cindypark.ca</Email>
+            <Box>
+                <h6>Let's Connect &#x1F44B;</h6>
+                <Email onClick={clickEmail}>contact@cindypark.ca</Email>
+            </Box>
+            {/* <Email onClick={clickEmail}>contact@cindypark.ca</Email> */}
             <Links>
                 {/* <Resume onClick={clickResume}>Resume |</Resume> */}
                 <div onClick={clickLinkedin}>

@@ -5,7 +5,7 @@ const Container = styled.div`
     min-height: 650px;
     background-color: ${props=>props.bgcolor ? props.bgcolor : "#F4F5F5"};
     display: flex;
-    padding-top: 80px;
+    // padding-top: 80px;
     padding-left: 20px;
     // margin-botom: -50px;
 `;

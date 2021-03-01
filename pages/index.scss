@@ -67,6 +67,7 @@
 
 .content {
     width: 100%;
+    padding-top: 80px;
 }
 
 .content_flexbox {
@@ -89,13 +90,6 @@
     }
 }
 
-#campused {
-    color: #1F5A98;
-    & > span {
-        color: #EA7317;
-    }
-}
-
 #adogpt {
     color: #EF9B89;
     & > span {
@@ -103,15 +97,25 @@
     }
 }
 
-#petsave {
-    color: #000;
-    & > span {
-        color: #54BAF3;
-    }
-}
 
 .more {
     & > * {
         margin: 0px 15px;
     }
+}
+
+.about {
+    display: flex;
+    padding: 20px 50px;
+    align-items: flex-start;
+}
+
+.about_banner {
+    background-color: #F4F5F5;
+    margin-top: 30px;
+}
+
+#about_pie {
+    max-width: 30%;
+    margin: 0px 50px 0px -50px;
 }

@@ -24,7 +24,7 @@ const Left = styled.div`
 const Source = styled.a`
 `;
 
-const ContentImage = ({imgurl, bgcolor, src, bg, pos, height}) => {
+const ContentImage = ({imgurl, bgcolor, src, bg, pos, width}) => {
     return <Container bgcolor={bgcolor}>
         <Left imgurl={imgurl} bg={bg} pos={pos}></Left>
         {src ? <Source href={src}>Source: {src}</Source> : null}
