@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from "comps/Header";
 import Footer from "comps/Footer";
 import Banner from "comps/Banner";
+import TopBanner from 'comps/TopBanner';
 
 export default function Campused() {
 
@@ -25,11 +26,14 @@ export default function Campused() {
       </Head>
         <Header/>
         <div className="content">
-        <Banner 
-        role2="Lead Front-end developer" 
-        role3=""
-        date="Sept—Dec 2020"
-        />
+          <TopBanner 
+          imgurl="/campused-banner.svg" 
+          bgcolor="#EA7317"/>
+          <Banner 
+          role2="Lead Front-end developer" 
+          role3=""
+          date="Sept—Dec 2020"
+          />
       </div>
         <Footer />
     </div>

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import Head from 'next/head'
 import Header from "comps/Header";
 import Footer from "comps/Footer";
@@ -16,21 +16,9 @@ import Router from 'next/router';
 //     } else document.getElementById("header").style.boxShadow = "0px"
 // }
 
-function clicktoAbout() {
-  if (true){
-    Router.push("/about");
-  }
-}
-
-function clicktoContact() {
-  if (true){
-    Router.push("/contact");
-  }
-}
-
 export default function Home() {
   // var i = 0;
-  // var text = "Hi, I'm Cindy,";
+  // var text = "Hi, I'm Cindy, ";
 
   // function typeWriter() {
   //   if (i < text.length) {
@@ -59,6 +47,16 @@ export default function Home() {
   //   typeWriter2();
   // }, 2000);
 
+
+
+  // for page down
+
+  const titleRef = useRef()
+
+  function handleBackClick() {
+    titleRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <div className="page">
       <Head>
@@ -81,12 +79,12 @@ export default function Home() {
       <div className="page_title">
         <h1 id="title"></h1>
         <h1 id="title2"></h1>
+          <div className="page_down down" >
+            <h2>see work</h2>
+            <img src="/down.svg" onClick={handleBackClick}/>
+        </div>
       </div>
-      <div className="page_down">
-        <h2>see work</h2>
-        <img src="/down.svg" />
-      </div>
-      <div className="page_left">
+      <div className="page_left"  ref={titleRef}>
         <h2>my recent work</h2>
       </div>
       <HomeInfo onClick={()=>{
@@ -96,12 +94,20 @@ export default function Home() {
       }} bgcolor="#094D69" title="medTrack"
       imgurl="/medtrack.svg"
       text="A medication tracker application for patients with Alzheimer's"/>
+      <HomeInfo onClick={()=>{
+        if(true){
+          Router.push("/petsave");
+        }
+      }} bgcolor="#231f20" title="petSave"
+      imgurl="/petsave.svg"
+      text="A new social media platform for individual animal rescuers and animal rescue organizations"/>
       <HomeInfo 
       onClick={()=>{
         if(true){
           Router.push("/campused");
         }
       }}
+      imgurl="/campused.svg"
       text="A smart solution for affordable furniture for students living on campus"
       />
       <HomeInfo onClick={()=>{
@@ -111,12 +117,6 @@ export default function Home() {
       }} bgcolor="#F28482" title="Adog'pt"
       imgurl="adogpt.svg"
       text="A simple educational application for those who are interested in adopting a dog"/>
-      <HomeInfo onClick={()=>{
-        if(true){
-          Router.push("/petsave");
-        }
-      }} bgcolor="#000" title="petSave"
-      text="A new social media platform for individual animal rescuers and animal rescue organizations"/>
       <Footer />
     </div>
   )
