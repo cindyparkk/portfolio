@@ -17,35 +17,35 @@ import Router from 'next/router';
 // }
 
 export default function Home() {
-  var i = 0;
-  var text = "Hi, I'm Cindy, ";
+  // var i = 0;
+  // var text = "Hi, I'm Cindy, ";
 
-  function typeWriter() {
-    if (i < text.length) {
-      document.getElementById("title").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 100);
-    } 
-  }
+  // function typeWriter() {
+  //   if (i < text.length) {
+  //     document.getElementById("title").innerHTML += text.charAt(i);
+  //     i++;
+  //     setTimeout(typeWriter, 100);
+  //   } 
+  // }
 
-  useEffect(()=>{
-    typeWriter();
-  }, []);
+  // useEffect(()=>{
+  //   typeWriter();
+  // }, []);
 
-  var x= 0;
-  var text2 = "I code and design."
+  // var x= 0;
+  // var text2 = "I code and design."
 
-  function typeWriter2(){
-    if (x < text2.length) {
-      document.getElementById("title2").innerHTML += text2.charAt(x);
-      x++;
-      setTimeout(typeWriter2, 100);
-    } 
-  }
+  // function typeWriter2(){
+  //   if (x < text2.length) {
+  //     document.getElementById("title2").innerHTML += text2.charAt(x);
+  //     x++;
+  //     setTimeout(typeWriter2, 100);
+  //   } 
+  // }
 
-  setTimeout(()=>{
-    typeWriter2();
-  }, 2000);
+  // setTimeout(()=>{
+  //   typeWriter2();
+  // }, 2000);
 
 
 
