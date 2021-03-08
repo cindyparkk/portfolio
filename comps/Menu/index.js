@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styled, {css} from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
 import Router from 'next/router';
 
@@ -7,7 +8,6 @@ const Container = styled.div`
     // width: 100%;
     display: flex;
     align-items: flex-start;
-    
 `;
 
 const MenuItem = styled.h2`
@@ -108,6 +108,14 @@ function clicktoAbout() {
 const Menu = ({onAbout, onContact}) => {
     const [expanded, setExpanded] = useState(false);
     const[selected, setSelected] = useState();
+
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+      })
+      const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
+      const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+      const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+      const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
 
     return <Container>
             <Box>

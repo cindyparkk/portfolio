@@ -3,6 +3,10 @@ import Head from 'next/head'
 import Header from "comps/Header";
 import Footer from "comps/Footer";
 import Banner from "comps/Banner";
+import TopBanner from "comps/TopBanner";
+import Content from 'comps/Content';
+import ContentImage from 'comps/ContentImage';
+import HomeInfo from 'comps/HomeInfo';
 
 export default function Adogpt() {
 
@@ -25,12 +29,47 @@ export default function Adogpt() {
       </Head>
       <Header/>
       <div className="content">
-        <h5 className="content_title" id="adogpt">Adog<span>'pt</span></h5>
+        <TopBanner 
+          imgurl="/adogpt-banner.svg" 
+          bgcolor="#B7D4A0"
+          // bgcolor="#F28482"
+          />
         <Banner 
-        role1="co-lead developer"
-        role2="co-lead designer"
-        role3=""
-        date="jan—may 2020"/>
+          role1="co-lead developer"
+          role2="co-lead designer"
+          role3=""
+          date="jan—may 2020"/>
+
+
+        <div className="more">
+          <HomeInfo 
+            width="25%" 
+            padding="20px 10px 20px 0px"
+            onClick={()=>{
+            if(true){
+              Router.push("/medtrack");
+            }}} 
+            bgcolor="#094D69" title="medTrack"
+            imgurl="/medtrack.svg"/>
+          <HomeInfo 
+            width="25%" 
+            padding="20px 10px 20px 0px"
+            onClick={()=>{
+              if(true){
+                Router.push("/petsave");
+              }}}
+            bgcolor="#231f20" title="petSave"
+            imgurl="/petsave.svg"
+            />
+          <HomeInfo 
+            width="25%"
+            padding="20px 10px 20px 0px"
+            onClick={()=>{
+              if(true){
+                Router.push("/campused");
+              }}} 
+            imgurl="campused.svg"/>
+          </div>
       </div>
       <Footer />
     </div>

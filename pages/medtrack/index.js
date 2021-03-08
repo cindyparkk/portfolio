@@ -112,9 +112,10 @@ export default function Medtrack() {
           item2="Communication within the team is crucial. Especially when connecting the front-end to the database, the entire team not only needs to know the progress of the project but also the detailed work division to assist one another when needed. Our team focused on communication and collaboration through holding consistent virtual meetings through Discord, and Visual Studio Code’s LiveShare extension."
           />
         </div>
-        <div className="content_flexbox more">
+        <div className="more">
           <HomeInfo 
-            width="20%" 
+            width="25%"
+            padding="20px 10px 20px 0px" 
             onClick={()=>{
           if(true){
             Router.push("/petsave");
@@ -123,8 +124,8 @@ export default function Medtrack() {
            bgcolor="#231f20" title="petSave"
            imgurl="/petsave.svg"/>
           <HomeInfo 
-          width="20%" 
-          padding="20px 20px 20px 0px"
+          width="25%" 
+          padding="20px 10px 20px 0px"
           onClick={()=>{
             if(true){
               Router.push("/campused");
@@ -133,7 +134,8 @@ export default function Medtrack() {
           imgurl="/campused.svg"
           />
           <HomeInfo 
-          width="20%"
+          width="25%"
+          padding="20px 10px 20px 0px"
           onClick={()=>{
             if(true){
               Router.push("/adogpt");
