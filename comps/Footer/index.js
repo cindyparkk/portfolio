@@ -94,7 +94,7 @@ const Footer = ({}) => {
             </Box>
             {/* <Email onClick={clickEmail}>contact@cindypark.ca</Email> */}
             <Links>
-                {/* <Resume onClick={clickResume}>Resume |</Resume> */}
+                <Resume onClick={clickResume}>Resume |</Resume>
                 <div onClick={clickLinkedin}>
                     <img src="/linkedin.svg"></img>
                 </div>
