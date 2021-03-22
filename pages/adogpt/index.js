@@ -7,6 +7,7 @@ import TopBanner from "comps/TopBanner";
 import Content from 'comps/Content';
 import ContentImage from 'comps/ContentImage';
 import HomeInfo from 'comps/HomeInfo';
+import Router from 'next/router';
 
 export default function Adogpt() {
 
@@ -35,12 +36,12 @@ export default function Adogpt() {
           // bgcolor="#F28482"
           />
         <Banner 
+          overview="A team of 2 create a mobile application that can act as an educational platform to bring social awareness on dog adoption. Our mission is to educate and inform those who are interested in adopting a dog, providing them with the necessary information they need before adopting. Our goal is to have every dog owner feel at ease with the knowledge they have before adopting a dog."
           role1="co-lead developer"
           role2="co-lead designer"
           role3=""
           date="jan—may 2020"/>
-
-
+          
         <div className="more">
           <HomeInfo 
             width="25%" 

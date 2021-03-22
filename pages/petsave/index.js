@@ -8,6 +8,7 @@ import Content from 'comps/Content';
 import ContentImage from 'comps/ContentImage';
 import HomeInfo from 'comps/HomeInfo';
 import styled from 'styled-components';
+import Router from 'next/router';
 
 export default function Petsave() {
 
