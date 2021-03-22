@@ -47,7 +47,7 @@ export default function Medtrack() {
           src="https://alz-journals.onlinelibrary.wiley.com/doi/full/10.1002/alz.12068"/>
           <div className="content_flexbox_box">
             <Content         
-            title="background (research)"
+            title="background (Research)"
             text="With our target market being both the people in mild to moderate stage of Alzheimer’s and the caregivers or family members who take care of Alzheimer's patients, the general age range of the audience is age of 60 or older. The basic characteristics of the users include:"
             display="block"
             item1="Possibility of living alone"
@@ -96,8 +96,12 @@ export default function Medtrack() {
         <div className="content_flexbox">
         <ContentImage imgurl="/medtrack-highfi2.svg" bg="cover" pos="center top" />
           <Content title="user testing"
-          text="To identify possible errors and solutions to the application, we invited four participants to a Zoom or Screen Sharing (if MacOS user), to navigate through the prototype screen. We conducted four separate sessions, each with one participant and two of our team members—one recording documents, and one guiding the participant throughout. In each session, the participant was asked to share their screen so that we can follow their navigation and the participant can verbally explain their thoughts. Before they start trying out the given scenarios, participants were asked to answer some general questions. After they finish all the tasks, there are few more questions that need to be answered. Based on these participant's inputs, we iterated the final version of the prototype, as shown on the left.
-          "/>
+          text="To identify possible errors and solutions to the application, we invited four participants to a Zoom or Screen Sharing (if MacOS user), to navigate through the prototype screen. We conducted four separate sessions, each with one participant and two of our team members—one recording documents, and one guiding the participant throughout. In each session, the participant was asked to share their screen so that we can follow their navigation and the participant can verbally explain their thoughts. Before they start trying out the given scenarios, participants were asked to answer some general questions. After they finish all the tasks, there are few more questions that need to be answered. Based on these participant's inputs, we iterated the final version of the prototype, as shown on the left. The participants were given the following tasks to complete:"
+          display="block"
+          item1="Add a new pill (Specific Days)"
+          item2="Check the list of existing medication"
+          item3="Filter through symptoms"
+          />
         </div>
         <div className="content_flexbox">
           <Content
