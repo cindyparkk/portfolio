@@ -43,7 +43,7 @@ export default function Petsave() {
         lang2="mySQL, Express, Multer"/>
         <Content 
         left="50px" right="50px"
-        text="Throughout market research, we found that there are existing platforms that provide services directly related to adopting rescued animals, and there is a lack of information provided as to how these rescues take place. Most of the animal rescue communities are organized by the rescue organizations themselves, where they provide a mass amount of information—rather than creating a “community,” including:"
+        text="Throughout market research, we found that there are existing platforms that provide services directly related to adopting rescued animals, but there is a lack of information provided as to how these rescues take place. Most of the animal rescue communities are organized by the rescue organizations themselves, where they provide a mass amount of information—rather than creating a “community,” including:"
         display="block"
         item1="Rescued animals that are available for adoption or for foster"
         item2="How to get involved with volunteering with that organization"

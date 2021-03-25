@@ -19,9 +19,9 @@
 .page_down {
     @include flexIt();
     // position: sticky;
-    // margin-top: 200px;
-    position: fixed;
-    bottom: 30px;
+    padding-top: 25%;
+    // position: absolute;
+    // bottom: 30px;
     width: 100%;
 
     & > img {
@@ -33,6 +33,10 @@
         //     transition: transform 0.5s;
         // }
     }
+}
+
+#href {
+    padding-top: 100px;
 }
 
 .page_left {

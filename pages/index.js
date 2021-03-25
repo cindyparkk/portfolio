@@ -4,6 +4,7 @@ import Header from "comps/Header";
 import Footer from "comps/Footer";
 import HomeInfo from "comps/HomeInfo";
 import Menu from "comps/Menu";
+import NextLink from 'next/link';
 
 import Router from 'next/router';
 
@@ -17,35 +18,35 @@ import Router from 'next/router';
 // }
 
 export default function Home() {
-  var i = 0;
-  var text = "Hi, I'm Cindy, ";
+  // var i = 0;
+  // var text = "Hi, I'm Cindy, ";
 
-  function typeWriter() {
-    if (i < text.length) {
-      document.getElementById("title").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 100);
-    } 
-  }
+  // function typeWriter() {
+  //   if (i < text.length) {
+  //     document.getElementById("title").innerHTML += text.charAt(i);
+  //     i++;
+  //     setTimeout(typeWriter, 100);
+  //   } 
+  // }
 
-  useEffect(()=>{
-    typeWriter();
-  }, []);
+  // useEffect(()=>{
+  //   typeWriter();
+  // }, []);
 
-  var x= 0;
-  var text2 = "I code and design."
+  // var x= 0;
+  // var text2 = "I code and design."
 
-  function typeWriter2(){
-    if (x < text2.length) {
-      document.getElementById("title2").innerHTML += text2.charAt(x);
-      x++;
-      setTimeout(typeWriter2, 100);
-    } 
-  }
+  // function typeWriter2(){
+  //   if (x < text2.length) {
+  //     document.getElementById("title2").innerHTML += text2.charAt(x);
+  //     x++;
+  //     setTimeout(typeWriter2, 100);
+  //   } 
+  // }
 
-  setTimeout(()=>{
-    typeWriter2();
-  }, 2000);
+  // setTimeout(()=>{
+  //   typeWriter2();
+  // }, 2000);
 
 
 
@@ -79,12 +80,16 @@ export default function Home() {
       <div className="page_title">
         <h1 id="title"></h1>
         <h1 id="title2"></h1>
+        <NextLink className="scroll" href="/#href">
           <div className="page_down down" >
             <h2>see work</h2>
-            <img src="/down.svg" onClick={handleBackClick}/>
+            <img src="/down.svg" 
+            // onClick={handleBackClick}
+            />
         </div>
+        </NextLink>
       </div>
-      <div className="page_left"  ref={titleRef}>
+      <div className="page_left" id="href" ref={titleRef}>
         <h2>my recent work</h2>
       </div>
       <HomeInfo onClick={()=>{
