@@ -9,7 +9,12 @@ import ContentImage from 'comps/ContentImage';
 import HomeInfo from 'comps/HomeInfo';
 import Router from 'next/router';
 
+import { useMediaQuery } from 'react-responsive';
+
 export default function Adogpt() {
+
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)'})
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
     return <div className="page">
         <Head>
@@ -37,11 +42,24 @@ export default function Adogpt() {
           />
         <Banner 
           overview="A team of 2 create a mobile application that can act as an educational platform to bring social awareness on dog adoption. Our mission is to educate and inform those who are interested in adopting a dog, providing them with the necessary information they need before adopting. Our goal is to have every dog owner feel at ease with the knowledge they have before adopting a dog."
-          role1="co-lead developer"
-          role2="co-lead designer"
+          role1="Co-lead developer"
+          role2="Co-lead designer"
           role3=""
-          date="jan—may 2020"/>
-          
+          date="Jan—May 2020"
+          lang1="Next.js"
+          lang2=""
+          />
+          {isDesktopOrLaptop && <Content 
+          left="50px" right="50px"
+          title="coming soon"
+          text="Content will be updated shortly. In the meantime... Check out below!"
+
+          />}
+          {isTabletOrMobile && <Content 
+          left="10px"
+          title="coming soon"
+          text="Content will be updated shortly. In the meantime... Check out below!"
+          />}
         <div className="more">
           <HomeInfo 
             width="25%" 

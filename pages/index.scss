@@ -19,9 +19,9 @@
 .page_down {
     @include flexIt();
     // position: sticky;
-    // margin-top: 200px;
-    position: fixed;
-    bottom: 30px;
+    padding-top: 600px;
+    // position: absolute;
+    // bottom: 30px;
     width: 100%;
 
     & > img {
@@ -33,6 +33,10 @@
         //     transition: transform 0.5s;
         // }
     }
+}
+
+#href {
+    padding-top: 100px;
 }
 
 .page_left {
@@ -48,6 +52,7 @@
 
 .contact_content {
     padding: 0px 30px;
+    width: 100%;
 }
 
 .content_title {
@@ -67,7 +72,7 @@
 
 .content {
     width: 100%;
-    padding-top: 80px;
+    padding-top: 110px;
 }
 
 .content_flexbox {
@@ -122,4 +127,30 @@
 #about_pie {
     max-width: 30%;
     margin: 0px 50px 0px -50px;
+}
+
+@media(max-width: 1224px){
+    .content_flexbox {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+
+        & > h6 {
+            margin-top: -50px;
+        }
+    }
+
+    .content_flexbox_box {
+        padding: 10px 10px;
+    }
+
+    #about_pie {
+        max-width: 75%;
+        margin: 0px;
+    }
+
+    .more {
+        display: flex;
+        flex-direction: column;
+    }
 }

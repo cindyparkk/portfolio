@@ -9,6 +9,11 @@ const Container = styled.div`
     background-color: #F4F5F5;
     display: flex;
     padding: 15px 50px 30px 50px;
+
+    @media(max-width: 768px){
+        flex-direction: column;
+        padding: 10px;
+    }
 `;
 
 const Left = styled.div`

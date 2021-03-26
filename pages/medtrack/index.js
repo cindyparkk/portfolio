@@ -10,7 +10,12 @@ import HomeInfo from 'comps/HomeInfo';
 
 import Router from 'next/router';
 
+import { useMediaQuery } from 'react-responsive';
+
 export default function Medtrack() {
+
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)'})
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
     return <div className="page">
         <Head>
@@ -38,10 +43,14 @@ export default function Medtrack() {
         overview="A team of 4 front-end developers and designers created a mobile medication tracker for patients diagnosed with the Alzheimer’s disease. This app’s functions include tracking medication usage, which pill to intake at a particular time of the day, along with displaying a variety of information about that medication."
         role3="Lead UI Designer, User Research, Prototyping &amp; Testing"
         />
-        <Content 
+        {isDesktopOrLaptop && <Content 
         left="50px" right="50px"
         text="As a team, we initially began to research for possible tracking list solutions for a niche community and came across applications that track medication intake and dosage. However, we found that most of the already existing applications are targeted towards a general audience, providing a lower level of accessibility. For example, most of the text were below 18pt, required a certain level of learning (i.e., hidden gestures), and/or had an overwhelming number of functionalities that can possibly be over-complicated for some users."
-        />
+        />}
+        {isTabletOrMobile && <Content 
+        left="10px" 
+        text="As a team, we initially began to research for possible tracking list solutions for a niche community and came across applications that track medication intake and dosage. However, we found that most of the already existing applications are targeted towards a general audience, providing a lower level of accessibility. For example, most of the text were below 18pt, required a certain level of learning (i.e., hidden gestures), and/or had an overwhelming number of functionalities that can possibly be over-complicated for some users."
+        />}
         <div className="content_flexbox">
           <ContentImage imgurl="/medtrack-fig1.jpg" 
           src="https://alz-journals.onlinelibrary.wiley.com/doi/full/10.1002/alz.12068"/>
@@ -56,7 +65,7 @@ export default function Medtrack() {
             item4="Closed bonds and social relationships"
             item5="Difficulty moving"
             item6="Chance of having chronic diseases"
-            left="10px"
+            // left="10px"
             bottom="-30px"
             />
           </div>
@@ -72,7 +81,8 @@ export default function Medtrack() {
             item3="Requirement of learnability of the UI (User Interface) must be low"
             />
             <Content 
-            left="10px" top="-30px" title=""
+            // left="10px" 
+            top="-30px" title=""
             text="Moreover, there are also limitations to micro-interactions for patients with Alzheimer’s / elderly:"
             display="block"
             item1="More tapping than scrolling"

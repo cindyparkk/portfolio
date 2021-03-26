@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import Menu from "comps/Menu";
+import Burger from "comps/Burger";
 
 import Router from 'next/router';
+import { useMediaQuery } from 'react-responsive';
 
 const Container = styled.div`
     // width: 100%;
@@ -62,19 +64,21 @@ const Header = ({onAbout, onContact}) => {
     // const [expanded, setExpanded] = useState(false);
     // const[selected, setSelected] = useState();
 
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+      })
+      const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
+      const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+      const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+      const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+
     return <Container>
         <HeaderBox>
             <MenuLogo onClick={clicktoHome}>
                 <Logo src="/logo-new.svg" />
             </MenuLogo>
-            <Menu />
-            {/* <Box>
-            <MenuItem onClick={()=>{setExpanded(!expanded);}}>
-                work<Icon expanded={expanded} src="/down.svg"/>
-            </MenuItem>
-            </Box>
-            <MenuItem onClick={onAbout}>about</MenuItem>
-            <MenuItem onClick={onContact}>contact</MenuItem> */}
+            {isDesktopOrLaptop && <Menu /> }
+            {isTabletOrMobile && <Burger />}
         </HeaderBox>
     </Container>
 }

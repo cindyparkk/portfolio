@@ -93,10 +93,10 @@ export default function About() {
                     />
                 </div>
             </div>
-            <div className="content_flexbox_box">
+            {/* <div className="content_flexbox_box">
                 <h5>What have I been doing with life?</h5>
                 <p>To be added.</p>
-            </div>
+            </div> */}
         </div>
         <Footer />
     </div>

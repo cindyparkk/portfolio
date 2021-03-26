@@ -11,7 +11,7 @@ const Container = styled.div`
 const Label = styled.h4``;
 
 const InputBox = styled.input`
-    min-width: 50%;
+    width: 60%;
     // max-width: ${props=>props.width ? props.width : "300px"};
     min-height: 40px;
     background-color: #fff;
