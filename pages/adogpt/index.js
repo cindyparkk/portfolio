@@ -9,7 +9,12 @@ import ContentImage from 'comps/ContentImage';
 import HomeInfo from 'comps/HomeInfo';
 import Router from 'next/router';
 
+import { useMediaQuery } from 'react-responsive';
+
 export default function Adogpt() {
+
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)'})
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
     return <div className="page">
         <Head>
@@ -44,7 +49,17 @@ export default function Adogpt() {
           lang1="Next.js"
           lang2=""
           />
-          
+          {isDesktopOrLaptop && <Content 
+          left="50px" right="50px"
+          title="coming soon"
+          text="Content will be updated shortly. In the meantime... Check out below!"
+
+          />}
+          {isTabletOrMobile && <Content 
+          left="10px"
+          title="coming soon"
+          text="Content will be updated shortly. In the meantime... Check out below!"
+          />}
         <div className="more">
           <HomeInfo 
             width="25%" 
