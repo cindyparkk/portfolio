@@ -10,7 +10,12 @@ import HomeInfo from 'comps/HomeInfo';
 import styled from 'styled-components';
 import Router from 'next/router';
 
+import { useMediaQuery } from 'react-responsive';
+
 export default function Petsave() {
+
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)'})
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
     return <div className="page">
         <Head>
@@ -41,7 +46,7 @@ export default function Petsave() {
         role3=""
         date="Feb—March 2021"
         lang2="mySQL, Express, Multer"/>
-        <Content 
+        {isDesktopOrLaptop && <Content 
         left="50px" right="50px"
         text="Throughout market research, we found that there are existing platforms that provide services directly related to adopting rescued animals, but there is a lack of information provided as to how these rescues take place. Most of the animal rescue communities are organized by the rescue organizations themselves, where they provide a mass amount of information—rather than creating a “community,” including:"
         display="block"
@@ -51,7 +56,18 @@ export default function Petsave() {
         item4="Organization-specific news and events"
         item5="Information about their organization—their mission, board of directors, FAQ, vision, etc."
         item6="[Rarely] organization-specific goods, (i.e. T-shirts for sale)"
-        />
+        />}
+        {isTabletOrMobile && <Content 
+        left="10px"
+        text="Throughout market research, we found that there are existing platforms that provide services directly related to adopting rescued animals, but there is a lack of information provided as to how these rescues take place. Most of the animal rescue communities are organized by the rescue organizations themselves, where they provide a mass amount of information—rather than creating a “community,” including:"
+        display="block"
+        item1="Rescued animals that are available for adoption or for foster"
+        item2="How to get involved with volunteering with that organization"
+        item3="Information and resources for shelters and cat / dog owners"
+        item4="Organization-specific news and events"
+        item5="Information about their organization—their mission, board of directors, FAQ, vision, etc."
+        item6="[Rarely] organization-specific goods, (i.e. T-shirts for sale)"
+        />}
         <Content 
         left="50px" right="50px" top="-30px" title=""
         text="In summary, most of these organizations and their websites only provide organization-specific information and resources, rather than general information about “animal rescue” itself. "/>

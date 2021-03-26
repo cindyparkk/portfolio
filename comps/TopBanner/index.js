@@ -8,6 +8,15 @@ const Container = styled.div`
     // padding-top: 80px;
     padding-left: 20px;
     // margin-botom: -50px;
+
+    @media(max-width: 1224px){
+        min-height: 500px;
+    }
+
+    @media(max-width: 768px){
+        min-height: 350px;
+        padding-left: 20px;
+    }
 `;
 
 const Box = styled.div`
@@ -17,6 +26,15 @@ const Box = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media(max-width: 1224px){
+        background-position: left;
+        background-size: 140%;
+    }
+    @media(max-width: 768px){
+        background-position: left;
+        background-size: 180%;
+    }
 `;
 
 const Title = styled.h3`

@@ -9,7 +9,12 @@ import ContentImage from 'comps/ContentImage';
 import HomeInfo from 'comps/HomeInfo';
 import Router from 'next/router';
 
+import { useMediaQuery } from 'react-responsive';
+
 export default function Campused() {
+
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)'})
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
     return <div className="page">
         <Head>
@@ -42,14 +47,22 @@ export default function Campused() {
           lang1="Next.js"
           lang2="Database: firebase, nodeJS"
           />
-          <Content 
+          {isDesktopOrLaptop && <Content 
         left="50px" right="50px"
         text="Through a thorough research, we found several problems or issues that university / college students face while living on campus, including:"
         display="block"
         item1="Students spend too much time and effort cleaning and selling furniture that they have used while living on campus when it is time for them to move out"
         item2="Dealing with the amount of junk load on campus that increases during the move out season from students trying to throw away their used belongings"
         item3="Students that rely on public transit usually have low accessibility to furniture shops or bringing these products home by themselves, especially the cheap ones on campus"
-        />
+        />}
+        {isTabletOrMobile && <Content 
+        left="10px"
+        text="Through a thorough research, we found several problems or issues that university / college students face while living on campus, including:"
+        display="block"
+        item1="Students spend too much time and effort cleaning and selling furniture that they have used while living on campus when it is time for them to move out"
+        item2="Dealing with the amount of junk load on campus that increases during the move out season from students trying to throw away their used belongings"
+        item3="Students that rely on public transit usually have low accessibility to furniture shops or bringing these products home by themselves, especially the cheap ones on campus"
+        />}
         <div className="content_flexbox">
           <ContentImage imgurl="/ubc.jpeg" bg="cover"
           src="https://you.ubc.ca/ubc-life/vancouver/residence/"/>

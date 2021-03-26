@@ -19,6 +19,10 @@ const Container = styled.div`
         transition: transform 0.5s;
     }
 
+    @media(max-width: 1224px){
+        width: 500px;
+    }
+
     @media(max-width: 768px){
         width: 380px;
         padding: 10px 5px;
@@ -51,6 +55,7 @@ const InfoTitle = styled.h5`
     @media(max-width: 768px){
         font-size: 35px;
         margin: 0;
+        margin-bottom: 10px;
     }
 `;
 
