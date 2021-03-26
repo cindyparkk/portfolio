@@ -6,6 +6,11 @@ const Container = styled.div`
     padding: 5px 5px 0px 50px;
     background-color: ${props=>props.bgcolor ? props.bgcolor : "#fff"};
     height: 100%;
+
+    @media(max-width: 1224px){
+        height: 300px;
+        padding: 0;
+    }
 `;
 
 const Left = styled.div`
@@ -19,6 +24,11 @@ const Left = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     overflow-y: scroll;
     // fix this scroll
+
+    @media(max-width: 1224px){
+        height: 100px;
+        width: 95vw;
+    }
 `;
 
 const Source = styled.a`

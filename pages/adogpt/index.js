@@ -37,10 +37,13 @@ export default function Adogpt() {
           />
         <Banner 
           overview="A team of 2 create a mobile application that can act as an educational platform to bring social awareness on dog adoption. Our mission is to educate and inform those who are interested in adopting a dog, providing them with the necessary information they need before adopting. Our goal is to have every dog owner feel at ease with the knowledge they have before adopting a dog."
-          role1="co-lead developer"
-          role2="co-lead designer"
+          role1="Co-lead developer"
+          role2="Co-lead designer"
           role3=""
-          date="jan—may 2020"/>
+          date="Jan—May 2020"
+          lang1="Next.js"
+          lang2=""
+          />
           
         <div className="more">
           <HomeInfo 
