@@ -39,28 +39,29 @@ export default function Campused() {
           role2="Lead Front-end developer" 
           role3=""
           date="Sept—Dec 2020"
+          lang1="Next.js"
+          lang2="Database: firebase, nodeJS"
           />
           <Content 
         left="50px" right="50px"
-        text="Throughout market research, we found that there are existing platforms that provide services directly related to adopting rescued animals, and there is a lack of information provided as to how these rescues take place. Most of the animal rescue communities are organized by the rescue organizations themselves, where they provide a mass amount of information—rather than creating a “community,” including:"
+        text="Through a thorough research, we found several problems or issues that university / college students face while living on campus, including:"
         display="block"
-        item1="Rescued animals that are available for adoption or for foster"
-        item2="How to get involved with volunteering with that organization"
-        item3="Information and resources for shelters and cat / dog owners"
-        item4="Organization-specific news and events"
-        item5="Information about their organization—their mission, board of directors, FAQ, vision, etc."
-        item6="[Rarely] organization-specific goods, (i.e. T-shirts for sale)"
+        item1="Students spend too much time and effort cleaning and selling furniture that they have used while living on campus when it is time for them to move out"
+        item2="Dealing with the amount of junk load on campus that increases during the move out season from students trying to throw away their used belongings"
+        item3="Students that rely on public transit usually have low accessibility to furniture shops or bringing these products home by themselves, especially the cheap ones on campus"
         />
-        <Content 
-        left="50px" right="50px" top="-30px" title=""
-        text="In summary, most of these organizations and their websites only provide organization-specific information and resources, rather than general information about “animal rescue” itself. "/>
         <div className="content_flexbox">
-          <ContentImage imgurl="/petsave-fig1.png" 
-          src="https://www.jotform.com/how-to-start-an-animal-rescue/"/>
+          <ContentImage imgurl="/ubc.jpeg" bg="cover"
+          src="https://you.ubc.ca/ubc-life/vancouver/residence/"/>
           <div className="content_flexbox_box">
             <Content         
-            title="background (Research)"
-            text="We solve the lack of a structured community for animal rescuers by providing a social networking platform. Unlike the other existing applications or platforms available regarding animal rescue, this platform specifically targets those that are taking a part in rescuing animals as well as the local animal rescue organizations so that helpful tips and information can be shared amongst this niche community. A user can sign up using their email and username, and can share various posts with captions and photos, which then could be liked and commented by other registered users to create the bonding."
+            title="coming up with the solution"
+            text="With our target market being the university students living on campus in BC, Canada, we aimed to solve the problems listed above, as follows:"
+            display="block"
+            item1="campused is an efficient and easy market service application that is used for selling and buying furniture in dorms on school campuses in BC. "
+            item2="The furniture that is sold on campused can be left in the seller's dorm for the buyer to use when they move into that dorm; or, the seller and buyer can meetup somewhere on campus to exchange a furniture item."
+            item3="Since our app is very niche and local towards the user’s school, they can develop small and friendly communities, and the furniture they buy and sell will always be nearby. "
+            item4="While our competitors such as Facebook Marketplace and Craigslist fill a gap of buying and selling world-wide, campused is based more around niche communities, and it brings students together within certain schools and universities."
             />
           </div>
         </div>
@@ -68,68 +69,33 @@ export default function Campused() {
           <div className="content_flexbox_box">
             <Content 
             title="exploration and iterations: Wireframing the idea"
-            text="The following is a list of popular organizations / platforms we found online:"
+            text="As a team, we first developed the basic wireframe of the application, based on the general workflow that a user would should be able to go through on a market service platform. This workflow included the specific functionalities our app wished to feature. Some of the specifications of our app are:"
             display="block"
-            item1="C.A.R.E (https://carenorthshore.org/)"
-            item2="Animal Rescue Community (https://animalrescuecommunity.org/)"
-            item3="CARA (https://www.carams.org/)"
-            />
-            <Content 
-            left="10px" top="-30px" title=""
-            text="After examining the three popular platforms, we want to focus on how to spread the adoption information and exchange adoption experience, so people will have a better understanding of animal rescue organizations/rescuers. We decided to include the following functions in our app:"
-            display="block"
-            item1="Allow users to update animal shelters’ information and current situation"
-            item2="Allow users to discuss or leave comments under others’ posts"
-            item3="Allow users to share their knowledge/experience/stories in their posts"
+            item1="PayPal — With PayPal directly incorporated into the app, we aimed to ensure secure transactions while reducing the risk of fraud."
+            item2="Chatbox — A messaging system for sellers and buyers to communicate within the app. This way, no no external applications are needed to buy or sell on campused as the payment and messaging is combined together into one."
+            item3="User Rating — As another form of security; with the ability to rate sellers on the app, purchases are much more trustworthy and secure."
             />
           </div>
-          <ContentImage imgurl="/petsave-wireframe.svg" bg="contain" pos="center top"/>
-        </div>
-        <div className="content_flexbox">
-        <ContentImage imgurl="/petsave-highfi1.svg" bg="120%" pos="left top" />
-          <Content title="developing prototypes: first version of UI"
-          text="Based on the background research and the wireframe, two of the team members developed the first version of the UI, having it ready for the first round of user testing. Major changes from the wireframe included:"
-          display="block"
-          item1="Visualizing the components into accessible and usable components (i.e. buttons)"
-          item2="Adding colour scheme into the interface"
-          item3="Adding additional pages (i.e. login page)"
-          />
+          <ContentImage imgurl="/campused-wireframe.svg" bg="contain" pos="center top"/>
         </div>
         <div className="content_flexbox">
           <Content title="user testing"
-          text="Throughout this project, we conducted two rounds of user testing to solidify any possible errors and/or areas of improvement. The first user test was carried out with the first version of the UI (User Interface), and the second test with the second version. Through both testings, we were able to develop the final version of the interface, having it prepared to code out. For each session, we invited four participants to a Zoom or Screen Sharing (if MacOS user), to navigate through the prototype screen. We conducted four separate sessions, each with one participant and two of our team members—one recording documents, and one guiding the participant throughout. In each session, the participant was asked to share their screen so that we can follow their navigation and the participant can verbally explain their thoughts. Before they start trying out the given scenarios, participants were asked to answer some general questions. The participants were given the following tasks to complete for both user tests:"
+          text="During the early stages of this project, we conducted one round of user testing to solidify any possible errors and/or areas of improvement. Through the testings, we were able to develop the final version of the interface, having it prepared to code out. We invited five participants to a Zoom or Screen Sharing (if MacOS user), to navigate through the prototype screen. We conducted five separate sessions, each with one participant and two of our team members—one recording documents, and one guiding the participant throughout. In each session, the participant was asked to share their screen so that we can follow their navigation and the participant can verbally explain their thoughts. Before they start trying out the given scenarios, participants were asked to answer some general questions. The participants were given the following tasks to complete for both user tests:"
           display="block"
-          item1="Create an account"
-          item2="Create a post"
-          item3="Comment on a post and visit the user's profile, then make an interaction (follow/email)"
+          item1="Sign up and fill in basic information"
+          item2="Find your profile"
+          item3="Choose a furniture category"
+          item4="Create a listing"
           />
         </div>
         <div className="content_flexbox">
-          <div className="content_flexbox_box">
-            <Content title="second version of UI"
-            text="Based on the first user test, the following are the feedback we received from the participants, as well as the improvements made on the UI:"
-            display="block"
-            item1="Include more visual feedback on interactions (i.e. a confirmation modal for creating a post)"
-            item2="Create a logo for the application"
-            item3="Change of the colour scheme, as orange and black does not portray a welcoming social media platform"
-            item4="Clarify the purpose / goal of the application"
-            item5="Add a logout option"
-            item6="Replace some of the unnessary visuals, espeically the falcon image in the login page can be deceving"
-            />
-          </div>
-        <ContentImage imgurl="/petsave-highfi2.svg" bg="cover" pos="center top" />
-        </div>
-        <div className="content_flexbox_box">
-          <ContentImage imgurl="/petsave-highfi3.svg" bg="cover" pos="center top" />
-          <Content 
-          title="final UI"
-          text="We finally developed the final interface, which involved additional changes due to technical limitations during the development process. The following are the feedback we received from the participants, as well as the improvements made on the UI:"
+        <ContentImage imgurl="/campused-highfi1.svg" bg="120%" pos="left top" />
+          <Content title="developing prototypes"
+          text="Based on the feedback received from the users, our designers developed the prototype for the app, inspired by the Contra Wireframe kit on Figma. While converting the wireframe into a high-fidelity prototype, the designers focused on the following:"
           display="block"
-          item1="Include the username of corresponding user on the top navigation bar, instead of [Profile]"
-          item2="Ensure that the design of the components is consistent; make the comment input box similar to the normal input box that appears in the register / login pages, in terms of border-radius and colour"
-          item3="Add more colours, rather than keeping the interface mainly black and white, as there was a feedback that the UI can look rather bland and incomplete"
-          item4="Move the logout button elsewhere, as we aim to keep users mostly logged in"
-          item5="Remove the disabled [Let's Start] button in the introduction pages, because it may create confusion as to when the user can 'start'"
+          item1="Selection of colour scheme that best matches the app's purpose and mood"
+          item2="Ensuring that components and pages have consistent design"
+          item3="Adding additional pages (i.e. home landing page)"
           />
         </div>
         <div className="content_flexbox">
@@ -141,10 +107,9 @@ export default function Campused() {
           <Content
           title="takeaways" text=""
           display="block"
-          item1="It is important to lay out the number and types of requests the application needs to make to the database (POST, GET, PATCH, DELETE) in the beginning of the project so that all team members are on board."
-          item2="The tables in the database must be built with consideration, because some rows may require building a separate table instead"
-          item3="Simple is not always the answer. Over-simplifying a process or a function can create confusion to the users, even if they are comfortable with using technology."
-          item4="Implementing an image upload requires thorough attention through both the server and the database, as the naming conventions apply strict rules (i.e. must call for an “image” in both front and back-end)"
+          item1="In general, our team struggled with the lack of knowledge in each other's areas: front-end developers did not know how to encode and decode back-end codes, and vice versa for the only back-end developer in our team. To overcome this, we held almost daily meetings to debug together while educating one another."
+          item2="There must be precise and thorough (I repeat. T-h-o-r-o-u-g-h) communication to and from both ends in order to make a stable connection from the web to the database."
+          item3="Each member in the team must know their tasks and their abilities, and when these are not communicated early on, the project outcome would not be of your expectation."
           />
         </div>
           <div className="more">
