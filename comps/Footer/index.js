@@ -3,24 +3,6 @@ import styled from 'styled-components';
 
 import Router from 'next/router';
 
-function clickEmail() {
-    if (true){
-    Router.push("mailto:contact@cindypark.ca");
-    }
-}
-
-function clickResume() {
-    if (true){
-    Router.push("/resume.pdf");
-    }
-}
-
-function clickLinkedin() {
-    if (true){
-    Router.push("https://www.linkedin.com/in/cindypark-profile/");
-    }
-}
-
 const Container = styled.div`
     width: 100%;
     min-height: 130px;
@@ -31,6 +13,7 @@ const Container = styled.div`
     align-items: center;
     // padding-right: 40px;
     margin-top: 30px;
+    
 `;
 
 const FooterEmail = styled.div`
@@ -44,6 +27,12 @@ const FooterEmail = styled.div`
             color: #b0b0b0;
             transition: color 0.3s;
         }
+    }
+
+    @media(max-width: 1224px){
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 25px;
     }
 `;
 
@@ -66,6 +55,14 @@ const Box = styled.div`
     & > * {
         margin-right: 15px;
     }
+
+    @media(max-width: 1224px){
+        display: flex;
+        flex-flow: column nowrap;
+        h6 {
+            margin: 10px 0px;
+        }
+    }
 `;
 
 const Links = styled.div`
@@ -79,6 +76,12 @@ const Links = styled.div`
         padding-left: 5px;
         cursor: pointer;
     }
+    @media(max-width: 1224px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -15px;
+    }
 `;
 
 const Resume = styled.h6`
@@ -90,12 +93,12 @@ const Footer = ({}) => {
         <FooterEmail>
             <Box>
                 <h6>Let's Connect &#x1F44B;</h6>
-                <Email onClick={clickEmail}>contact@cindypark.ca</Email>
+                <Email onClick={()=>Router.push("mailto:contact@cindypark.ca")}>contact@cindypark.ca</Email>
             </Box>
             {/* <Email onClick={clickEmail}>contact@cindypark.ca</Email> */}
             <Links>
-                <Resume onClick={clickResume}>Resume |</Resume>
-                <div onClick={clickLinkedin}>
+                <Resume onClick={()=>Router.push("/Cindy_Park_Resume.pdf")}>Resume |</Resume>
+                <div onClick={()=>Router.push("https://www.linkedin.com/in/cindypark-profile/")}>
                     <img src="/linkedin.svg"></img>
                 </div>
             </Links>
