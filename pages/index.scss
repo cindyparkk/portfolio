@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 150px 0px;
+    margin-top: 250px;
     h1 {
         margin: 0;
     }
@@ -19,7 +19,7 @@
 .page_down {
     @include flexIt();
     // position: sticky;
-    padding-top: 600px;
+    padding-top: 200px;
     // position: absolute;
     // bottom: 30px;
     width: 100%;
@@ -130,6 +130,17 @@
 }
 
 @media(max-width: 1224px){
+    .page_title {
+        margin-top: 180px;
+        margin-bottom: 0;
+        h1 {
+            font-size: 55px;
+        }
+    }
+
+    .page_down {
+        margin-top: 0px;
+    }
     .content_flexbox {
         display: flex;
         flex-direction: column;
