@@ -84,7 +84,7 @@ const RightNav = ({open}) => {
                 <img src="/down-white.svg" />
             </div>
             <div onClick={()=>{Router.push("/adogpt")}}>
-                <h5>adog'pt</h5>
+                <h5>Adog'pt</h5>
                 <img src="/down-white.svg" />
             </div>
         </Work>

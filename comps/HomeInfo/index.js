@@ -18,6 +18,11 @@ const Container = styled.div`
         transform: scale(1.01);
         transition: transform 0.5s;
     }
+
+    @media(max-width: 768px){
+        width: 380px;
+        padding: 10px 5px;
+    }
 `;
 
 const InfoImage = styled.img`
@@ -25,6 +30,10 @@ const InfoImage = styled.img`
     height: auto;
     // padding: 20px 50px 20px 0px;
     padding: ${props=>props.padding ? props.padding : "20px 50px 20px 0px"};
+
+    @media(max-width: 768px){
+        padding: 15px;
+    }
 `;
 
 const Box = styled.div`
@@ -38,6 +47,11 @@ const InfoTitle = styled.h5`
     color: #fff;
     margin: 0;
     // max-width: 60%;
+
+    @media(max-width: 768px){
+        font-size: 35px;
+        margin: 0;
+    }
 `;
 
 const InfoText = styled.p`
@@ -46,12 +60,20 @@ const InfoText = styled.p`
     // text-align: center;
     width: 100%;
     margin-right: 0;
+
+    @media(max-width: 768px){
+        margin: 10px 0px;
+    }
 `;
 
 const Bottom = styled.div`
     // align-items: flex-end;
     width: 100%;
     margin-top: 30px;
+
+    @media(max-width: 768px){
+        margin: 0;
+    }
 `;
 
 const HomeInfo = ({bgcolor, imgurl, title, text, onClick, width, padding}) => {
