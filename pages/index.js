@@ -54,9 +54,9 @@ export default function Home() {
 
   const titleRef = useRef()
 
-  function handleBackClick() {
-    titleRef.current.scrollIntoView({ behavior: 'smooth' })
-  }
+  // function handleBackClick() {
+  //   titleRef.current.scrollIntoView({ behavior: 'smooth' })
+  // }
 
   return (
     <div className="page">
