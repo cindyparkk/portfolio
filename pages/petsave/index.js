@@ -5,7 +5,7 @@ import Footer from "../../comps/Footer";
 import Banner from "../../comps/Banner";
 import TopBanner from "../../comps/TopBanner";
 import Content from "../../comps/Content";
-import ContentImage from "c../../omps/ContentImage";
+import ContentImage from "../../comps/ContentImage";
 import HomeInfo from "../../comps/HomeInfo";
 import styled from 'styled-components';
 import Router from 'next/router';
