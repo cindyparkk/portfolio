@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import Head from 'next/head'
-import Header from "comps/Header";
-import Footer from "comps/Footer";
-import Banner from "comps/Banner";
-import TopBanner from "comps/TopBanner";
-import Content from 'comps/Content';
-import ContentImage from 'comps/ContentImage';
-import HomeInfo from 'comps/HomeInfo';
+import Header from "../comps/global/header";
+import Footer from "../comps/Footer";
+import Banner from "../comps/Banner";
+import TopBanner from "../comps/TopBanner";
+import Content from '../comps/Content';
+import ContentImage from '../comps/ContentImage';
+import HomeInfo from '../comps/HomeInfo';
 import Router from 'next/router';
 
 import { useMediaQuery } from 'react-responsive';
@@ -34,7 +34,7 @@ export default function Adogpt() {
             />
       </Head>
       <Header/>
-      <div className="content">
+      {/* <div className="content">
         <TopBanner 
           imgurl="/adogpt-banner.svg" 
           bgcolor="#B7D4A0"
@@ -90,6 +90,6 @@ export default function Adogpt() {
             imgurl="campused.svg"/>
           </div>
       </div>
-      <Footer />
+      <Footer /> */}
     </div>
 }

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Head from 'next/head'
-import Header from "comps/Header";
+import Header from "comps/global/header";
 import Footer from "comps/Footer";
 import Banner from "comps/Banner";
 import TopBanner from 'comps/TopBanner';

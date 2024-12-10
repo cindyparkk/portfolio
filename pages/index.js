@@ -1,17 +1,20 @@
-import React, {useEffect, useRef} from 'react';
-import Head from 'next/head'
-import Header from "comps/Header";
-import Footer from "comps/Footer";
-import HomeInfo from "comps/HomeInfo";
-import Menu from "comps/Menu";
-import NextLink from 'next/link';
+import React, { useEffect, useRef } from "react";
+import Head from "next/head";
+import styled from "styled-components";
+// import Footer from "comps/Footer";
+// import HomeInfo from "comps/HomeInfo";
+// import Menu from "comps/Menu";
+// import NextLink from 'next/link';
 
-import Router from 'next/router';
+import Router from "next/router";
+import Header from "../comps/global/header";
+
+import colors from "../theme/colors";
 
 // window.onscroll = function() {scrollFunction()};
 
 // function scrollFunction(){
-//   if (document.body.scrollTop > 50 || 
+//   if (document.body.scrollTop > 50 ||
 //     document.documentElement.scrollTop > 50) {
 //       document.getElementById("header").style.boxShadow = "0 0 0.5em rgba(0, 0, 0, 0.5)";
 //     } else document.getElementById("header").style.boxShadow = "0px"
@@ -26,7 +29,7 @@ export default function Home() {
   //     document.getElementById("title").innerHTML += text.charAt(i);
   //     i++;
   //     setTimeout(typeWriter, 100);
-  //   } 
+  //   }
   // }
 
   // useEffect(()=>{
@@ -41,18 +44,16 @@ export default function Home() {
   //     document.getElementById("title2").innerHTML += text2.charAt(x);
   //     x++;
   //     setTimeout(typeWriter2, 100);
-  //   } 
+  //   }
   // }
 
   // setTimeout(()=>{
   //   typeWriter2();
   // }, 2000);
 
-
-
   // for page down
 
-  const titleRef = useRef()
+  const titleRef = useRef();
 
   // function handleBackClick() {
   //   titleRef.current.scrollIntoView({ behavior: 'smooth' })
@@ -64,20 +65,27 @@ export default function Home() {
         <title>Cindy Park | Portfolio</title>
         <link rel="shortcut icon" type="image/x-icon" href="/logo-c.svg"></link>
         <link
-              rel="preload"
-              href="/fonts/Kiona/Kiona-Regular.ttf"
-              as="font"
-              crossOrigin=""
-            />
-            <link
-              rel="preload"
-              href="/fonts/Metropolis/Metropolis-Black.oft"
-              as="font"
-              crossOrigin=""
-            />
+          rel="preload"
+          href="/fonts/Kiona/Kiona-Regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Metropolis/Metropolis-Black.oft"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
       <Header id="header" />
-      <div className="page_title">
+      <TempPage>
+        <h3>The following portfolio is currently under construction.</h3>
+        <p>
+          If you require access to the portfolio details, please contact
+          cindypark31@gmail.com
+        </p>
+      </TempPage>
+      {/* <div className="page_title">
         <h1 id="title"></h1>
         <h1 id="title2"></h1>
         <NextLink className="scroll" href="/#href">
@@ -122,7 +130,19 @@ export default function Home() {
       }} bgcolor="#F28482" title="Adog'pt"
       imgurl="adogpt.svg"
       text="A simple educational application for those who are interested in adopting a dog"/>
-      <Footer />
+      <Footer /> */}
     </div>
-  )
+  );
 }
+
+const TempPage = styled.div`
+  position: absolute;
+  top: 75px;
+  background-color: ${colors.beige};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 90vh;
+`;
