@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import Head from 'next/head'
-import Header from "comps/global/header";
-import Footer from "comps/Footer";
-import Input from "comps/Input";
-import Button from "comps/Button";
+import Header from "../../comps/global/header";
+import Footer from "../../comps/Footer";
+import Input from "../../comps/Input";
+import Button from "../../comps/Button";
 
 export default function Contact() {
     return <div className="page contact">

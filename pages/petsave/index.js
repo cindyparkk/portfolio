@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import Head from 'next/head'
-import Header from "comps/global/header";
-import Footer from "comps/Footer";
-import Banner from "comps/Banner";
-import TopBanner from "comps/TopBanner";
-import Content from 'comps/Content';
-import ContentImage from 'comps/ContentImage';
-import HomeInfo from 'comps/HomeInfo';
+import Header from "../../comps/global/header";
+import Footer from "../../comps/Footer";
+import Banner from "../../comps/Banner";
+import TopBanner from "../../comps/TopBanner";
+import Content from "../../comps/Content";
+import ContentImage from "c../../omps/ContentImage";
+import HomeInfo from "../../comps/HomeInfo";
 import styled from 'styled-components';
 import Router from 'next/router';
 
