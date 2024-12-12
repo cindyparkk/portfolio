@@ -1,116 +1,124 @@
 @mixin flexIt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@import './index.scss';
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100&display=swap');
+@import "./index.scss";
 
 @font-face {
-    font-family: "Kiona";
-    src: url("/fonts/Kiona/Kiona-Regular.ttf") format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Metropolis";
-    src: url("/fonts/Metropolis/Metropolis-Thin.otf") format('opentype');
-    font-display: swap;
+  font-family: "Inter-Light";
+  src: url("/fonts/Inter/Inter_24pt-Light.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "GmarketSansBold";
-    src: url("/fonts/GmarketSans/GmarketSansBold.otf") format('opentype');
-    font-display: swap;
+  font-family: "Inter-Light-Italics";
+  src: url("/fonts/Inter/Inter_24pt-LightItalic.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "GmarketSansLight";
-    src: url("/fonts/GmarketSans/GmarketSansLight.otf") format('opentype');
-    font-display: swap;
+  font-family: "NewYork";
+  src: url("/fonts/NewYork/NewYork.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("/fonts/GmarketSans/GmarketSansLight.otf") format("opentype");
+  font-display: swap;
 }
 
 /* The typing effect */
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
-  
-  /* The typewriter cursor effect */
+
+/* The typewriter cursor effect */
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #000; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
 }
 
-
-
-body, html {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    overflow-x: hidden;
-    color: #272834;
-    scroll-behavior: smooth;
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  color: #272834;
+  scroll-behavior: smooth;
+  background-color: #eeede8;
 }
 
 h1 {
-    font-family: 'GmarketSansBold', sans-serif;
-    font-size: 82px;
-    line-height: 1.3em;
+  font-family: "GmarketSansBold", sans-serif;
+  font-size: 82px;
+  line-height: 1.3em;
 }
 
 h2 {
-    font-family: "Kiona";
-    font-size: 20px;
+  font-family: "Kiona";
+  font-size: 20px;
 }
 
 h3 {
-    font-family: 'GmarketSansBold', sans-serif;
-    font-size: 28px;
+  font-family: "NewYork";
+  font-size: 28px;
+  font-weight: normal;
 }
 
 h4 {
-    font-family: "Kiona";
-    font-size: 18px;
+  font-family: "Kiona";
+  font-size: 18px;
 }
 
 h5 {
-    font-family: 'GmarketSansLight', sans-serif;
-    font-size: 32px;
-    line-height: 1.3em;
+  font-family: "GmarketSansLight", sans-serif;
+  font-size: 32px;
+  line-height: 1.3em;
 }
 
 h6 {
-    font-family: "Metropolis";
-    font-size: 20px;
+  font-family: "Metropolis";
+  font-size: 20px;
 }
 
 h6 {
-    & > ul {
-        & > li {
-            margin: 30px 0px;
-        }
+  & > ul {
+    & > li {
+      margin: 30px 0px;
     }
+  }
 }
 
 p {
-    font-family: "Lato", sans-serif;
-    font-size: 18px;
-    line-height: 1.75;
-    font-weight: 300;
+  font-family: "Inter-Light", sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 300;
 }
 
-::selection{
-    color: #fff;
-    background: #272834;
+::selection {
+  color: #fff;
+  background: #272834;
 }
 
 a {
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    font-style: italic;
-    color: #844fd0;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #844fd0;
 }
