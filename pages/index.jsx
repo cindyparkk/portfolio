@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Head from "next/head";
 import styled from "styled-components";
 // import Footer from "comps/Footer";
 // import HomeInfo from "comps/HomeInfo";
@@ -7,52 +6,13 @@ import styled from "styled-components";
 // import NextLink from 'next/link';
 
 import Router from "next/router";
+// comps
+import PageHead from "../comps/global/pageHead";
 import Header from "../comps/global/header";
 
 import colors from "../theme/colors";
 
-// window.onscroll = function() {scrollFunction()};
-
-// function scrollFunction(){
-//   if (document.body.scrollTop > 50 ||
-//     document.documentElement.scrollTop > 50) {
-//       document.getElementById("header").style.boxShadow = "0 0 0.5em rgba(0, 0, 0, 0.5)";
-//     } else document.getElementById("header").style.boxShadow = "0px"
-// }
-
 export default function Home() {
-  // var i = 0;
-  // var text = "Hi, I'm Cindy, ";
-
-  // function typeWriter() {
-  //   if (i < text.length) {
-  //     document.getElementById("title").innerHTML += text.charAt(i);
-  //     i++;
-  //     setTimeout(typeWriter, 100);
-  //   }
-  // }
-
-  // useEffect(()=>{
-  //   typeWriter();
-  // }, []);
-
-  // var x= 0;
-  // var text2 = "I code and design."
-
-  // function typeWriter2(){
-  //   if (x < text2.length) {
-  //     document.getElementById("title2").innerHTML += text2.charAt(x);
-  //     x++;
-  //     setTimeout(typeWriter2, 100);
-  //   }
-  // }
-
-  // setTimeout(()=>{
-  //   typeWriter2();
-  // }, 2000);
-
-  // for page down
-
   const titleRef = useRef();
 
   // function handleBackClick() {
@@ -60,32 +20,18 @@ export default function Home() {
   // }
 
   return (
-    <div className="page">
-      <Head>
-        <title>Cindy Park | Portfolio</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/logo-c.svg"></link>
-        <link
-          rel="preload"
-          href="/fonts/Kiona/Kiona-Regular.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/Metropolis/Metropolis-Black.oft"
-          as="font"
-          crossOrigin=""
-        />
-      </Head>
-      <Header id="header" />
-      <TempPage>
-        <h3>The following portfolio is currently under construction.</h3>
-        <p>
-          If you require access to the portfolio details, please contact
-          cindypark31@gmail.com
-        </p>
-      </TempPage>
-      {/* <div className="page_title">
+    <>
+      <PageHead />
+      <div className="page">
+        <Header id="header" />
+        <TempPage>
+          <h3>The following portfolio is currently under construction.</h3>
+          <p>
+            If you require access to the portfolio details, please contact
+            cindypark31@gmail.com
+          </p>
+        </TempPage>
+        {/* <div className="page_title">
         <h1 id="title"></h1>
         <h1 id="title2"></h1>
         <NextLink className="scroll" href="/#href">
@@ -131,7 +77,8 @@ export default function Home() {
       imgurl="adogpt.svg"
       text="A simple educational application for those who are interested in adopting a dog"/>
       <Footer /> */}
-    </div>
+      </div>
+    </>
   );
 }
 
