@@ -1,3 +1,6 @@
 export const pageRoutes = [
-  { title: "Home", route: "/" },
+  { title: "CINDY PARK", route: "/" },
+  { title: "work", route: "/work" },
+  { title: "about", route: "/about" },
+  { title: "contact", route: "/contact" },
 ];

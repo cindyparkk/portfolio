@@ -61,39 +61,55 @@ html {
   color: #272834;
   scroll-behavior: smooth;
   background-color: #eeede8;
+  font-family: "Inter-Light";
 }
 
 h1 {
-  font-family: "GmarketSansBold", sans-serif;
-  font-size: 82px;
-  line-height: 1.3em;
+  font-family: "NewYork";
+  font-size: 100px;
+  line-height: 100px;
+  font-weight: normal;
+  margin: 0px;
 }
 
 h2 {
-  font-family: "Kiona";
-  font-size: 20px;
+  font-family: "NewYork";
+  font-size: 65px;
+  line-height: auto;
+  font-weight: normal;
+  margin: 0px;
 }
 
 h3 {
   font-family: "NewYork";
-  font-size: 28px;
+  font-size: 50px;
+  line-height: auto;
   font-weight: normal;
+  margin: 0px;
 }
 
 h4 {
-  font-family: "Kiona";
-  font-size: 18px;
+  font-family: "Inter-Light";
+  font-size: 30px;
+  line-height: auto;
+  font-weight: normal;
+  margin: 0px;
 }
 
 h5 {
-  font-family: "GmarketSansLight", sans-serif;
-  font-size: 32px;
-  line-height: 1.3em;
+  font-family: "Inter-Light";
+  font-size: 24px;
+  line-height: auto;
+  font-weight: normal;
+  margin: 0px;
 }
 
 h6 {
-  font-family: "Metropolis";
+  font-family: "Inter-Light";
   font-size: 20px;
+  line-height: auto;
+  font-weight: normal;
+  margin: 0px;
 }
 
 h6 {
@@ -105,9 +121,9 @@ h6 {
 }
 
 p {
-  font-family: "Inter-Light", sans-serif;
+  font-family: "Inter-Light";
   font-size: 18px;
-  line-height: 1.75;
+  line-height: 28px;
   font-weight: 300;
 }
 
