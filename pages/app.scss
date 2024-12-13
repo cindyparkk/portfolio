@@ -124,7 +124,14 @@ p {
   font-family: "Inter-Light";
   font-size: 18px;
   line-height: 28px;
-  font-weight: 300;
+  font-weight: normal;
+}
+
+span {
+  font-family: "Inter-Light";
+  font-size: 14px;
+  line-height: auto;
+  font-weight: normal;
 }
 
 ::selection {

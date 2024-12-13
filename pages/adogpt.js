@@ -1,39 +1,39 @@
-import React, {useState, useEffect} from 'react';
-import Head from 'next/head'
+import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import Header from "../comps/global/header";
-import Footer from "../comps/Footer";
+import Footer from "../comps/global/footer";
 import Banner from "../comps/Banner";
 import TopBanner from "../comps/TopBanner";
-import Content from '../comps/Content';
-import ContentImage from '../comps/ContentImage';
-import HomeInfo from '../comps/HomeInfo';
-import Router from 'next/router';
+import Content from "../comps/Content";
+import ContentImage from "../comps/ContentImage";
+import HomeInfo from "../comps/HomeInfo";
+import Router from "next/router";
 
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from "react-responsive";
 
 export default function Adogpt() {
+  const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
-  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)'})
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-
-    return <div className="page">
-        <Head>
+  return (
+    <div className="page">
+      <Head>
         <title>Adog'pt | Cindy Park</title>
         <link rel="shortcut icon" type="image/x-icon" href="/logo-c.svg"></link>
         <link
-              rel="preload"
-              href="/fonts/Kiona/Kiona-Regular.ttf"
-              as="font"
-              crossOrigin=""
-            />
-            <link
-              rel="preload"
-              href="/fonts/Metropolis/Metropolis-Black.oft"
-              as="font"
-              crossOrigin=""
-            />
+          rel="preload"
+          href="/fonts/Kiona/Kiona-Regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Metropolis/Metropolis-Black.oft"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
-      <Header/>
+      <Header />
       {/* <div className="content">
         <TopBanner 
           imgurl="/adogpt-banner.svg" 
@@ -92,4 +92,5 @@ export default function Adogpt() {
       </div>
       <Footer /> */}
     </div>
+  );
 }

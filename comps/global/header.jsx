@@ -14,7 +14,7 @@ function clicktoHome() {
   }
 }
 
-const Header = ({ onAbout, onContact }) => {
+const Header = () => {
   const router = useRouter();
   // const [expanded, setExpanded] = useState(false);
   // const[selected, setSelected] = useState();
@@ -36,7 +36,10 @@ const Header = ({ onAbout, onContact }) => {
   return (
     <HeaderBox>
       <FlexBox flex={6} justify={"flex-start"}>
-        <Logo src="/logo-new.svg" onClick={clicktoHome} />
+        <Logo
+          src="/logo-new.svg"
+          onClick={() => onRedirectPage(pageRoutes[0].route)}
+        />
         <HeaderText onClick={() => onRedirectPage(pageRoutes[0].route)}>
           {pageRoutes[0].title}
         </HeaderText>

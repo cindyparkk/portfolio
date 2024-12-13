@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-// import Footer from "comps/Footer";
 // import HomeInfo from "comps/HomeInfo";
 // import Menu from "comps/Menu";
 // import NextLink from 'next/link';
@@ -9,7 +8,8 @@ import Router from "next/router";
 // comps
 import PageHead from "../comps/global/pageHead";
 import Header from "../comps/global/header";
-
+import Footer from "../comps/global/footer";
+// constants
 import colors from "../theme/colors";
 
 export default function Home() {
@@ -31,6 +31,7 @@ export default function Home() {
             cindypark31@gmail.com
           </p>
         </TempPage>
+        <Footer />
         {/* <div className="page_title">
         <h1 id="title"></h1>
         <h1 id="title2"></h1>
@@ -83,7 +84,7 @@ export default function Home() {
 }
 
 const TempPage = styled.div`
-  position: absolute;
+  /* position: absolute; */
   top: 75px;
   background-color: ${colors.beige};
   display: flex;
