@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import colors from "../../theme/colors";
 import { ReactComponent as LinkedInIcon } from "../../public/icons/linkedin-icon.svg";
 import { ReactComponent as EmailIcon } from "../../public/icons/email-icon.svg";
@@ -16,11 +16,13 @@ const Footer = () => {
       </div>
       <Icons>
         <EmailIcon onClick={() => router.push("mailto:contact@cindypark.ca")} />
-        <LinkedInIcon
-          onClick={() =>
-            router.push("https://www.linkedin.com/in/cindypark-profile/")
-          }
-        />
+        <Link
+          href="https://www.linkedin.com/in/cindypark-profile/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <LinkedInIcon />
+        </Link>
       </Icons>
     </Container>
   );
@@ -70,7 +72,8 @@ const Icons = styled.div`
     margin-right: 15px;
   }
 
-  & > svg:hover {
+  & > svg:hover,
+  a:hover {
     opacity: 0.75;
     cursor: pointer;
   }
