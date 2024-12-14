@@ -113,21 +113,6 @@
     }
 }
 
-.about {
-    display: flex;
-    padding: 20px 50px;
-    align-items: flex-start;
-}
-
-.about_banner {
-    background-color: #F4F5F5;
-    margin-top: 30px;
-}
-
-#about_pie {
-    max-width: 30%;
-    margin: 0px 50px 0px -50px;
-}
 
 @media(max-width: 1224px){
     .page_title {
@@ -153,11 +138,6 @@
 
     .content_flexbox_box {
         padding: 10px 10px;
-    }
-
-    #about_pie {
-        max-width: 75%;
-        margin: 0px;
     }
 
     .more {

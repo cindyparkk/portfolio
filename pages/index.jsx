@@ -4,7 +4,6 @@ import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 
 // comps
-
 import PageLayout from "../comps/global/pageLayout";
 // constants
 import colors from "../theme/colors";

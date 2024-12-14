@@ -10,7 +10,7 @@ import { pageRoutes } from "../../routes/pages";
 import { ReactComponent as Logo } from "../../public/logo-2024.svg";
 
 const Header = (props) => {
-  const { path } = props;
+  const { path, isDarkMode } = props;
   const router = useRouter();
 
   const onRedirectPage = (route) => {
@@ -26,18 +26,22 @@ const Header = (props) => {
   const isRetina = useMediaQuery({ query: "(min-resolution: 2dppx)" });
 
   return (
-    <HeaderBox>
-      <FlexBox flex={6} justify={"flex-start"}>
+    <HeaderBox {...props}>
+      <LogoBox {...props}>
         <Logo onClick={() => onRedirectPage(pageRoutes[0].route)} />
-        <HeaderText onClick={() => onRedirectPage(pageRoutes[0].route)}>
+        <HeaderText
+          {...props}
+          onClick={() => onRedirectPage(pageRoutes[0].route)}
+        >
           {pageRoutes[0].title}
         </HeaderText>
-      </FlexBox>
-      <FlexBox flex={2}>
+      </LogoBox>
+      <NavBox>
         {pageRoutes.slice(1).map((item) => {
           return (
             <>
               <HeaderText
+                {...props}
                 active={item.route === path}
                 onClick={() => {
                   onRedirectPage(item.route);
@@ -48,7 +52,7 @@ const Header = (props) => {
             </>
           );
         })}
-      </FlexBox>
+      </NavBox>
     </HeaderBox>
   );
 };
@@ -60,8 +64,8 @@ export default Header;
 const HeaderBox = styled.div`
   width: 100%;
   height: 60px;
-  background-color: ${colors.beige};
-  // add this when scrolled down
+  background-color: ${(props) =>
+    props.isDarkMode ? colors.black : colors.beige};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,19 +76,21 @@ const HeaderBox = styled.div`
   padding: 0px;
 `;
 
-const FlexBox = styled.div`
+const LogoBox = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: ${(props) =>
-    props.justify ? props.justify : `space-between`};
-  flex: ${(props) => (props.flex ? props.flex : 1)};
-
+  justify-content: flex-start;
+  width: 40%;
+  padding-left: 60px;
   & > svg {
     cursor: pointer;
     max-width: 50px;
     height: auto;
     margin-right: 10px;
+    path {
+      fill: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -94,8 +100,18 @@ const FlexBox = styled.div`
   transition: 0.5s all;
 `;
 
+const NavBox = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+  transition: 0.5s all;
+  padding-right: 60px;
+`;
+
 const HeaderText = styled.h5`
-  color: ${colors.black};
+  color: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
   position: relative;
   display: block;
   cursor: pointer;

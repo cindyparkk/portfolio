@@ -3,7 +3,7 @@ import Head from "next/head";
 import Header from "../../comps/global/header";
 import Footer from "../../comps/global/footer";
 import Input from "../../comps/Input";
-import Button from "../../comps/Button";
+import Button from "../../comps/button";
 
 export default function Contact() {
   return (

@@ -3,14 +3,14 @@ import styled from "styled-components";
 import colors from "../../theme/colors";
 
 const SideNav = (props) => {
-  const { path } = props;
+  const { path, isDarkMode } = props;
 
     const pageTitle = path && path.slice(1);
 
   return (
     <>
-      <Container>
-        <PageTitleText>{pageTitle}</PageTitleText>
+      <Container {...props}>
+        <PageTitleText {...props}>{pageTitle}</PageTitleText>
       </Container>
     </>
   );
@@ -22,7 +22,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${colors.beige};
+  background-color: ${(props) =>
+    props.isDarkMode ? colors.black : colors.beige};
   position: absolute;
   left: 0;
   top: 0;
@@ -34,4 +35,5 @@ const PageTitleText = styled.h4`
   transform: rotate(-90deg);
   font-family: "NewYork";
   text-transform: uppercase;
+  color: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
 `;
