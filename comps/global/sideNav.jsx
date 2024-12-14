@@ -5,6 +5,7 @@ import colors from "../../theme/colors";
 const SideNav = (props) => {
   const { path, isDarkMode } = props;
 
+  // only include paths after /work
     const pageTitle = path && path.slice(1);
 
   return (
