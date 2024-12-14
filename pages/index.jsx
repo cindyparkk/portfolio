@@ -1,96 +1,91 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-// import HomeInfo from "comps/HomeInfo";
-// import Menu from "comps/Menu";
-// import NextLink from 'next/link';
+import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 
-import Router from "next/router";
 // comps
-import PageHead from "../comps/global/pageHead";
-import Header from "../comps/global/header";
-import Footer from "../comps/global/footer";
+
+import PageLayout from "../comps/global/pageLayout";
 // constants
 import colors from "../theme/colors";
+import { pageRoutes } from "../routes/pages";
 
 export default function Home() {
-  const titleRef = useRef();
-
-  // function handleBackClick() {
-  //   titleRef.current.scrollIntoView({ behavior: 'smooth' })
-  // }
+  const router = useRouter();
 
   return (
     <>
-      <PageHead />
-      <div className="page">
-        <Header id="header" />
-        <TempPage>
-          <h3>The following portfolio is currently under construction.</h3>
-          <p>
-            If you require access to the portfolio details, please contact
-            cindypark31@gmail.com
-          </p>
-        </TempPage>
-        <Footer />
-        {/* <div className="page_title">
-        <h1 id="title"></h1>
-        <h1 id="title2"></h1>
-        <NextLink className="scroll" href="/#href">
-          <div className="page_down down" >
-            <h2>see work</h2>
-            <img src="/down.svg" 
-            // onClick={handleBackClick}
-            />
-        </div>
-        </NextLink>
-      </div>
-      <div className="page_left" id="href" ref={titleRef}>
-        <h2>my recent work</h2>
-      </div>
-      <HomeInfo onClick={()=>{
-        if(true){
-          Router.push("/medtrack");
+      <PageLayout
+        isBorder
+        pageContent={
+          <HomePage>
+            <TopBox>
+              <Name>CINDY PARK</Name>
+              <h4>Front-end Developer & UIUX Designer</h4>
+              <h6>
+                <i>Based in Seoul, Korea / Established in Vancouver, Canada</i>
+                <br></br>I build pixel-perfect, accessible interfaces and have a
+                passion for intuitively implemented UX.
+              </h6>
+            </TopBox>
+            <PageList>
+              {pageRoutes.slice(1).map((item) => {
+                return (
+                  <>
+                    <PageName
+                      onClick={() => {
+                        router.push(item.route);
+                      }}
+                    >
+                      {item.title}
+                    </PageName>
+                  </>
+                );
+              })}
+            </PageList>
+          </HomePage>
         }
-      }} bgcolor="#094D69" title="medTrack"
-      imgurl="/medtrack.svg"
-      text="A medication tracker application for patients with Alzheimer's"/>
-      <HomeInfo onClick={()=>{
-        if(true){
-          Router.push("/petsave");
-        }
-      }} bgcolor="#231f20" title="petSave"
-      imgurl="/petsave.svg"
-      text="A new social media platform for individual animal rescuers and animal rescue organizations"/>
-      <HomeInfo 
-      onClick={()=>{
-        if(true){
-          Router.push("/campused");
-        }
-      }}
-      imgurl="/campused.svg"
-      text="A smart solution for affordable furniture for students living on campus"
       />
-      <HomeInfo onClick={()=>{
-        if(true){
-          Router.push("/adogpt");
-        }
-      }} bgcolor="#F28482" title="Adog'pt"
-      imgurl="adogpt.svg"
-      text="A simple educational application for those who are interested in adopting a dog"/>
-      <Footer /> */}
-      </div>
     </>
   );
 }
 
-const TempPage = styled.div`
-  /* position: absolute; */
-  top: 75px;
-  background-color: ${colors.beige};
+const HomePage = styled.div`
+  /* background-color: #dad; */
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  min-height: 90vh;
+  justify-content: space-between;
+`;
+
+const TopBox = styled.div`
+  & > * {
+    margin-bottom: 10px;
+  }
+  & > h6 {
+    line-height: 1.5;
+  }
+`;
+
+const Name = styled.h1`
+  font-size: 10em;
+  margin-bottom: 30px;
+`;
+
+const PageList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  /* background-color: #dad; */
+`;
+
+const PageName = styled.h1`
+  text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+    border-bottom: 2.5px solid ${colors.black};
+    transition: border 0.2s ease;
+    /* text-decoration: underline; */
+  }
 `;

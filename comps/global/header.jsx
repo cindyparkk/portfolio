@@ -1,29 +1,21 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useRouter, usePathname } from "next/navigation";
-
-import Router from "next/router";
 import { useMediaQuery } from "react-responsive";
+
 // constants
 import colors from "../../theme/colors";
 import { pageRoutes } from "../../routes/pages";
 
-function clicktoHome() {
-  if (true) {
-    Router.push("/");
-  }
-}
+import { ReactComponent as Logo } from "../../public/logo-2024.svg";
 
-const Header = () => {
+const Header = (props) => {
+  const { path } = props;
   const router = useRouter();
-  // const [expanded, setExpanded] = useState(false);
-  // const[selected, setSelected] = useState();
 
   const onRedirectPage = (route) => {
     router.push(route);
   };
-
-  const path = usePathname();
 
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 1224px)",
@@ -36,16 +28,11 @@ const Header = () => {
   return (
     <HeaderBox>
       <FlexBox flex={6} justify={"flex-start"}>
-        <Logo
-          src="/logo-new.svg"
-          onClick={() => onRedirectPage(pageRoutes[0].route)}
-        />
+        <Logo onClick={() => onRedirectPage(pageRoutes[0].route)} />
         <HeaderText onClick={() => onRedirectPage(pageRoutes[0].route)}>
           {pageRoutes[0].title}
         </HeaderText>
       </FlexBox>
-      {/* {isDesktopOrLaptop && <Menu /> }
-            {isTabletOrMobile && <Burger />} */}
       <FlexBox flex={2}>
         {pageRoutes.slice(1).map((item) => {
           return (
@@ -70,28 +57,10 @@ Header.defaultProps = {};
 
 export default Header;
 
-const Container = styled.div`
-  // width: 100%;
-  // display: flex;
-  // flex-direction: column;
-  width: 100%;
-  max-height: 100px;
-  background-color: #dad;
-  // box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  transition: 0.2s;
-  z-index: 1;
-  box-sizing: border-box;
-`;
-
 const HeaderBox = styled.div`
   width: 100%;
-  max-height: 75px;
+  height: 60px;
   background-color: ${colors.beige};
-  border-bottom: 1px solid #000;
   // add this when scrolled down
   display: flex;
   align-items: center;
@@ -99,7 +68,7 @@ const HeaderBox = styled.div`
   position: fixed;
   top: 0;
   transition: 0.2s;
-  z-index: 1;
+  z-index: 20;
   padding: 0px;
 `;
 
@@ -110,6 +79,18 @@ const FlexBox = styled.div`
   justify-content: ${(props) =>
     props.justify ? props.justify : `space-between`};
   flex: ${(props) => (props.flex ? props.flex : 1)};
+
+  & > svg {
+    cursor: pointer;
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s;
+    }
+  }
   transition: 0.5s all;
 `;
 
@@ -153,14 +134,14 @@ const HeaderText = styled.h5`
   }
 `;
 
-const Logo = styled.img`
-  cursor: pointer;
-  max-width: 50px;
-  height: auto;
-  margin-right: 10px;
+// const Logo = styled.img`
+//   cursor: pointer;
+//   max-width: 50px;
+//   height: auto;
+//   margin-right: 10px;
 
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.5s;
-  }
-`;
+//   &:hover {
+//     transform: scale(1.1);
+//     transition: transform 0.5s;
+//   }
+// `;

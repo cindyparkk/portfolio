@@ -8,7 +8,7 @@ const PageHead = (props) => {
         <title>
           {title ? `${title} | Cindy Park ` : `Cindy Park | Portfolio`}
         </title>
-        <link rel="shortcut icon" type="image/x-icon" href="/logo-c.svg"></link>
+        <link rel="shortcut icon" type="image/x-icon" href="/logo-2024.svg"></link>
         {/* <link
           rel="preload"
           href="/fonts/Kiona/Kiona-Regular.ttf"

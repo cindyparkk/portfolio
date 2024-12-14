@@ -30,13 +30,12 @@ export default Footer;
 
 const Container = styled.div`
   width: 100%;
-  min-height: 75px;
+  min-height: 60px;
   position: absolute;
   bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid ${colors.black};
   background-color: ${colors.beige};
 `;
 
@@ -59,6 +58,7 @@ const Box = styled.div`
 const Icons = styled.div`
   display: flex;
   align-items: center;
+  padding-right: 60px;
 
   & > svg {
     width: 30px;
