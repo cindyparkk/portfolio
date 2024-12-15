@@ -34,7 +34,8 @@ const DateRange = styled.span`
   text-transform: uppercase;
   width: 100%;
   margin-top: 5px;
-  padding-right: 5px;
+  padding-right: 10px;
+  text-align: right;
 `;
 
 const ExpBox = styled.div`

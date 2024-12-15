@@ -74,8 +74,9 @@ const PageName = styled.h1`
   text-transform: uppercase;
   &:hover {
     cursor: pointer;
-    border-bottom: 2.5px solid ${colors.black};
-    transition: border 0.2s ease;
+    /* border-bottom: 2.5px solid ${colors.black}; */
     /* text-decoration: underline; */
+    transform: skew(-18deg);
+    transition: transform 0.2s ease-in-out;
   }
 `;

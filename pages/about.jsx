@@ -14,7 +14,7 @@ export default function About(props) {
   return (
     <>
       <AboutPage>
-        <FlexBox>
+        <FlexBox style={{padding:'3em 0'}}>
           <PortraitBox>
             <Portrait src="/portrait-image.png" />
           </PortraitBox>
@@ -58,7 +58,7 @@ export default function About(props) {
             </div>
           </InfoBox>
         </FlexBox>
-        <FlexBox style={{ marginTop: "60px" }}>
+        <FlexBox style={{ marginTop: "60px", padding: "20px" }}>
           <FlexBox style={{ flexDirection: "column", flex: 1 }}>
             <h2>My career so far</h2>
             <FlexBox style={{ width: "80%", flexWrap: "wrap" }}>
@@ -108,6 +108,12 @@ const AboutPage = styled.div`
 const FlexBox = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  & > h2 {
+    margin-bottom: 10px;
+  }
 `;
 
 const PortraitBox = styled.div`
@@ -116,7 +122,7 @@ const PortraitBox = styled.div`
   justify-content: center;
   flex: 1;
   padding-right: 2em;
-  margin-top: 8em;
+  /* margin-top: 8em; */
 `;
 
 const Portrait = styled.img`
