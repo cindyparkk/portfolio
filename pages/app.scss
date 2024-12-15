@@ -26,8 +26,14 @@
 }
 
 @font-face {
-  font-family: "GmarketSansLight";
-  src: url("/fonts/GmarketSans/GmarketSansLight.otf") format("opentype");
+  font-family: "Inter-Medium";
+  src: url("/fonts/Inter/Inter_24pt-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("/fonts/Inter/Inter_24pt-Bold.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -55,9 +61,9 @@
 body,
 html {
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
   margin: 0;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   color: #1a1919;
   scroll-behavior: smooth;
   background-color: #eeede8;
@@ -143,4 +149,8 @@ a {
   font-family: "Inter-Light";
   font-size: 18px;
   text-decoration: underline;
+}
+
+b {
+  font-family: "Inter-Medium";
 }

@@ -14,7 +14,7 @@ const Header = (props) => {
   const router = useRouter();
 
   const onRedirectPage = (route) => {
-    router.push(route);
+    router.push(route, { scroll: true });
   };
 
   const isDesktopOrLaptop = useMediaQuery({

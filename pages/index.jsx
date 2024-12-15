@@ -27,6 +27,7 @@ export default function Home() {
               <>
                 <PageName
                   onClick={() => {
+                    // router.push(item.route, { scroll: true });
                     router.push(item.route);
                   }}
                 >
