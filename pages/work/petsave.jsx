@@ -1,14 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Head from "next/head";
-import Header from "../../comps/global/header";
-import Footer from "../../comps/global/footer";
-import Banner from "../../comps/Banner";
-import TopBanner from "../../comps/TopBanner";
-import Content from "../../comps/Content";
-import ContentImage from "../../comps/ContentImage";
-import HomeInfo from "../../comps/HomeInfo";
-import styled from "styled-components";
-import Router from "next/router";
 
 import { useMediaQuery } from "react-responsive";
 
@@ -18,7 +8,7 @@ export default function Petsave() {
 
   return (
     <div className="page">
-      <Head>
+      {/* <Head>
         <title>petSave | Cindy Park</title>
         <link rel="shortcut icon" type="image/x-icon" href="/logo-c.svg"></link>
         <link
@@ -231,7 +221,7 @@ export default function Petsave() {
           />
         </div>
       </div>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

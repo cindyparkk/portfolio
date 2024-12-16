@@ -3,15 +3,12 @@ import styled from "styled-components";
 import colors from "../../theme/colors";
 
 const SideNav = (props) => {
-  const { path, isDarkMode } = props;
-
-  // only include paths after /work
-    const pageTitle = path && path.slice(1);
+  const { path, isShowTitle } = props;
 
   return (
     <>
       <Container {...props}>
-        <PageTitleText {...props}>{pageTitle}</PageTitleText>
+        {isShowTitle && <PageTitleText {...props}>{path.slice(6)}</PageTitleText>}
       </Container>
     </>
   );

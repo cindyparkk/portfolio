@@ -76,6 +76,6 @@ const Page = styled.div`
   border-color: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
   overflow-y: scroll;
   overflow-x: hidden;
-  padding: 20px;
+  padding: 32px;
   color: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
 `;

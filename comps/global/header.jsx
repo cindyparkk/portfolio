@@ -31,13 +31,14 @@ const Header = (props) => {
         <Logo onClick={() => onRedirectPage(pageRoutes[0].route)} />
         <HeaderText
           {...props}
+          style={{ textTransform: "uppercase" }}
           onClick={() => onRedirectPage(pageRoutes[0].route)}
         >
           {pageRoutes[0].title}
         </HeaderText>
       </LogoBox>
       <NavBox>
-        {pageRoutes.slice(1).map((item) => {
+        {pageRoutes.slice(1, 4).map((item) => {
           return (
             <>
               <HeaderText
@@ -115,6 +116,7 @@ const HeaderText = styled.h5`
   position: relative;
   display: block;
   cursor: pointer;
+  text-transform: lowercase;
   text-decoration: ${(props) => props.active && `line-through`};
 
   &:before,

@@ -1,3 +1,3 @@
-export const workRoutes = [
+export const projectRoutes = [
   { title: "Adog'pt", route: "/adogpt" },
 ];

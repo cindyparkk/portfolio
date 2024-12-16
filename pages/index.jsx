@@ -22,7 +22,7 @@ export default function Home() {
           </h6>
         </TopBox>
         <PageList>
-          {pageRoutes.slice(1).map((item) => {
+          {pageRoutes.slice(1,4).map((item) => {
             return (
               <>
                 <PageName
@@ -76,7 +76,7 @@ const PageName = styled.h1`
     cursor: pointer;
     /* border-bottom: 2.5px solid ${colors.black}; */
     /* text-decoration: underline; */
-    transform: skew(-18deg);
+    transform: skew(-5deg) translate(15px);
     transition: transform 0.2s ease-in-out;
   }
 `;

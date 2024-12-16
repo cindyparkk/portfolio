@@ -2,7 +2,7 @@ export const workExperiences = [
   {
     dateRange: "july 2022 — aug 2023",
     jobTitle: "Technical Manager",
-    companyName: "British Columbia Institute of Technology",
+    companyName: "Post-secondary Institution in Canada",
     location: "vancouver, canada",
     description: [
       "Managed and served as the bridge between design and engineering within the multi-disciplinary team of 8, consisted of full-stack developers and UI/UX designers.",
@@ -12,7 +12,7 @@ export const workExperiences = [
   {
     dateRange: "mar 2021 — aug 2023",
     jobTitle: "Front-end Developer / UIUX Designer",
-    companyName: "British Columbia Institute of Technology",
+    companyName: "Post-secondary Institution in Canada",
     location: "vancouver, canada",
     description: [
       "Delivered production-ready code with ReactJS based on interactive prototypes that best reflect user intentions and ensure seamless user experience.",

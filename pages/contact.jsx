@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { colors } from "../theme";
 
 export default function Contact(props) {
-  console.log(props.isDarkMode)
   return (
     <>
       <ContactPage>

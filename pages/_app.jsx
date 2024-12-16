@@ -1,31 +1,46 @@
 import "./app.scss";
 import { useState } from "react";
-import {  usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import styled from "styled-components";
 // comps
 import PageHead from "../comps/global/pageHead";
 import Header from "../comps/global/header";
 import Footer from "../comps/global/footer";
 import SideNav from "../comps/global/sideNav";
-
+// constans
 import { colors } from "../theme";
+import { pageRoutes } from "../routes/pages";
 
 function MyApp({ Component, pageProps }) {
   const path = usePathname();
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  const pageHeadTitle = (pathname) => {
+    let pageTitle = "";
+    if (pathname !== "/") {
+      pageRoutes.map((page) => {
+        if (page.route === pathname) pageTitle = page.title;
+      });
+      return pageTitle;
+    }
+  };
+
   return (
     <>
-      <PageHead />
+      <PageHead title={pageHeadTitle(path)} />
       {path === "/" ? (
         <BlankHeader isDarkMode={isDarkMode} />
       ) : (
         <Header path={path} isDarkMode={isDarkMode} />
       )}
-      <Page isDarkMode={isDarkMode} isBorder={!path.includes("/work")}>
+      <Page isDarkMode={isDarkMode} isBorder={!path.includes("/work/")}>
         <Component {...pageProps} isDarkMode={isDarkMode} />
       </Page>
-      <SideNav path={path} isDarkMode={isDarkMode} />
+      <SideNav
+        path={path}
+        isDarkMode={isDarkMode}
+        isShowTitle={path.includes("/work/")}
+      />
       <RightBar isDarkMode={isDarkMode} />
       <Footer
         isDarkMode={isDarkMode}

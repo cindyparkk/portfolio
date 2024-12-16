@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const PageHead = (props) => {
-    const { title } = props;
+  const { title } = props;
   return (
     <>
       <Head>

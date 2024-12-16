@@ -14,7 +14,7 @@ export default function About(props) {
   return (
     <>
       <AboutPage>
-        <FlexBox style={{padding:'3em 0'}}>
+        <FlexBox style={{ padding: "60px 0" }}>
           <PortraitBox>
             <Portrait src="/portrait-image.png" />
           </PortraitBox>
@@ -58,7 +58,7 @@ export default function About(props) {
             </div>
           </InfoBox>
         </FlexBox>
-        <FlexBox style={{ marginTop: "60px", padding: "20px" }}>
+        <FlexBox style={{ padding: "60px 20px" }}>
           <FlexBox style={{ flexDirection: "column", flex: 1 }}>
             <h2>My career so far</h2>
             <FlexBox style={{ width: "80%", flexWrap: "wrap" }}>
@@ -81,15 +81,7 @@ export default function About(props) {
           </FlexBox>
           <FlexBox style={{ flexDirection: "column", flex: 1 }}>
             {workExperiences.map((item) => {
-              return (
-                <WorkExp
-                  dateRange={item.dateRange}
-                  jobTitle={item.jobTitle}
-                  companyName={item.companyName}
-                  location={item.location}
-                  description={item.description}
-                />
-              );
+              return <WorkExp {...item} />;
             })}
           </FlexBox>
         </FlexBox>
