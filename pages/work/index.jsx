@@ -4,28 +4,70 @@ import { useRouter } from "next/navigation";
 // constants
 import { defaultProjects, lockedProjects } from "../../constants/projects";
 import { colors } from "../../theme";
+import { password } from "../../constants/importantKeys";
 // comps
 import GlobalInput from "../../comps/global/input";
 import WorkTitle from "../../comps/workTitle";
+import GlobalButton from "../../comps/global/button";
 // icons
 import { ReactComponent as LockedIcon } from "../../public/icons/lock-icon-big.svg";
 import { ReactComponent as LeftIcon } from "../../public/icons/chevron-left-icon.svg";
 
 const Work = (props) => {
+  const { isDarkMode } = props;
   const [isOpenLockedPage, setIsOpenLockedPage] = useState(false);
   const [isOpenLockedProjects, setIsOpenLockedProjects] = useState(false);
+  const [enteredPassword, setEnteredPassword] = useState("");
+  const [isError, setIsError] = useState(false);
+
   const router = useRouter();
+
+  const onChange = (name, value) => {
+    setEnteredPassword(value);
+  };
+
+  const handleSubmit = () => {
+    if (enteredPassword === password) {
+      setIsOpenLockedPage(false);
+    } else if (enteredPassword !== password) {
+      setIsError(true);
+    }
+    setEnteredPassword("");
+  };
+
   return (
     <>
       {isOpenLockedPage ? (
         <LockedWorkPage {...props}>
           <LockedIcon />
-          <h3>This page is protected.</h3>
-          <h6>
-            To take a look at the recent project, please enter the password.
-          </h6>
-          <GlobalInput />
-          <BackButtonBox onClick={() => setIsOpenLockedPage(false)} {...props}>
+          <h3>This content is confidential.</h3>
+          <h6>To view the recent projects, please enter the password.</h6>
+          <InputBox>
+            <GlobalInput
+              {...props}
+              placeholder="Enter password"
+              type="password"
+              isDarkMode={isDarkMode}
+              error={isError}
+              onChange={onChange}
+              value={enteredPassword}
+            />
+            <GlobalButton
+              text="submit"
+              isDark={!isError}
+              isError={isError}
+              onClick={handleSubmit}
+            />
+          </InputBox>
+          {isError && <span>The entered password is incorrect.</span>}
+          <BackButtonBox
+            onClick={() => {
+              setIsOpenLockedPage(false);
+              setIsError(false);
+              setEnteredPassword("");
+            }}
+            {...props}
+          >
             <LeftIcon />
             <p>Back to list of projects</p>
           </BackButtonBox>
@@ -42,8 +84,8 @@ const Work = (props) => {
                     if (index === 0) {
                       setIsOpenLockedPage(true);
                     } else {
-                    //   const pathname = `/work/${item.title}`;
-                    //   return router.push(pathname);
+                      //   const pathname = `/work/${item.title}`;
+                      //   return router.push(pathname);
                     }
                   }}
                 />
@@ -78,6 +120,25 @@ const LockedWorkPage = styled.div`
     path {
       stroke: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
     }
+  }
+  & > * {
+    margin-bottom: 15px;
+  }
+  & > span {
+    margin-top: -10px;
+    color: ${colors.red};
+  }
+`;
+
+const InputBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: -30px;
+  & > button {
+    position: relative;
+    left: -50px;
   }
 `;
 
