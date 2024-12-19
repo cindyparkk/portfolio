@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { colors } from "../theme";
 import { ReactComponent as LockIcon } from "../public/icons/lock-icon.svg";
 
 const WorkTitle = (props) => {
@@ -7,7 +7,7 @@ const WorkTitle = (props) => {
   return (
     <>
       <Container>
-        <DateBox>
+        <DateBox {...props}>
           {isLocked ? <LockIcon /> : <div />}
           <h6>{dateRange}</h6>
         </DateBox>
@@ -45,5 +45,10 @@ const DateBox = styled.div`
   padding-right: 10px;
   & > h6 {
     text-transform: uppercase;
+  }
+  & > svg {
+    path {
+      fill: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
+    }
   }
 `;

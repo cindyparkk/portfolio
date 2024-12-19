@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // comps
-import GlobalButton from "../comps/button";
+import GlobalButton from "../comps/global/button";
 import WorkExp from "../comps/workExp";
 // icons
 import { ReactComponent as DownloadIcon } from "../public/icons/download-icon.svg";

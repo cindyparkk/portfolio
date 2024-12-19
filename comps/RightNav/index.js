@@ -52,7 +52,6 @@ const Work = styled.div`
         display: flex;
         flex-flow: row nowrap;
         cursor: pointer;
-        &:select
     }
 
     img {

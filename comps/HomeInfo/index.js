@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../button";
+import Button from "../global/button";
 
 const Container = styled.div`
   min-width: ${(props) => (props.width ? props.width : "60%")};

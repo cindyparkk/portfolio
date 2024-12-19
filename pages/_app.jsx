@@ -3,10 +3,10 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import styled from "styled-components";
 // comps
-import PageHead from "../comps/global/pageHead";
-import Header from "../comps/global/header";
-import Footer from "../comps/global/footer";
-import SideNav from "../comps/global/sideNav";
+import PageHead from "../comps/layout/pageHead";
+import Header from "../comps/layout/header";
+import Footer from "../comps/layout/footer";
+import SideNav from "../comps/layout/sideNav";
 // constans
 import { colors } from "../theme";
 import { pageRoutes } from "../routes/pages";

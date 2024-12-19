@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import GlobalButton from "../button";
+import GlobalButton from "../global/button";
 // constants
 import colors from "../../theme/colors";
 // icons
@@ -92,8 +92,7 @@ const Icons = styled.div`
     cursor: pointer;
 
     path {
-      fill: ${(props) =>
-        props.isDarkMode ? colors.beige : colors.black};
+      fill: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
     }
   }
 

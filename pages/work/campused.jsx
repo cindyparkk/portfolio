@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Header from "../../comps/global/header";
-import Footer from "../../comps/global/footer";
+import Header from "../../comps/layout/header";
+import Footer from "../../comps/layout/footer";
 import Banner from "../../comps/Banner";
 import TopBanner from "../../comps/TopBanner";
 import Content from "../../comps/Content";

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import styled from "styled-components";
-import colors from "../theme/colors";
+import colors from "../../theme/colors";
 
 const GlobalButton = (props) => {
   const { text, isDark } = props;
