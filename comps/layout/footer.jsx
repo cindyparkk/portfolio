@@ -16,7 +16,7 @@ const Footer = (props) => {
   const router = useRouter();
   return (
     <Container {...props}>
-      <ButtonBox>
+      <ButtonBox {...props}>
         <GlobalButton
           text={isDarkMode ? "light mode" : "dark mode"}
           startIcon={isDarkMode ? <SunIcon /> : <MoonIcon />}
@@ -47,7 +47,8 @@ export default Footer;
 
 const Container = styled.div`
   width: 100%;
-  min-height: 60px;
+  height: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
   position: absolute;
   bottom: 0;
   display: flex;
@@ -62,29 +63,15 @@ const ButtonBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 60px;
-`;
-
-const Box = styled.div`
-  display: flex;
-  align-items: center;
-  & > * {
-    margin-right: 15px;
-  }
-
-  @media (max-width: 1224px) {
-    display: flex;
-    flex-flow: column nowrap;
-    h6 {
-      margin: 10px 0px;
-    }
-  }
+  padding-left: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
 `;
 
 const Icons = styled.div`
   display: flex;
   align-items: center;
-  padding-right: 60px;
+  padding-right: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
 
   & > a {
     width: 30px;
