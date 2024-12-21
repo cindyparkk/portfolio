@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/navigation";
 // constants
-import { defaultProjects, lockedProjects } from "../../constants/projects";
+import { projects } from "../../constants/projects";
 import { colors } from "../../theme";
 import { password } from "../../constants/importantKeys";
 // comps
@@ -29,6 +29,7 @@ const Work = (props) => {
   const handleSubmit = () => {
     if (enteredPassword === password) {
       setIsOpenLockedPage(false);
+      setIsOpenLockedProjects(true);
     } else if (enteredPassword !== password) {
       setIsError(true);
     }
@@ -74,23 +75,30 @@ const Work = (props) => {
         </LockedWorkPage>
       ) : (
         <WorkPage>
-          {defaultProjects?.length > 0 &&
-            defaultProjects.map((item, index) => {
-              return (
-                <WorkTitle
-                  {...item}
-                  {...props}
-                  onClick={() => {
-                    if (index === 0) {
-                      setIsOpenLockedPage(true);
-                    } else {
-                      //   const pathname = `/work/${item.title}`;
-                      //   return router.push(pathname);
-                    }
-                  }}
-                />
-              );
-            })}
+          {projects.slice(isOpenLockedProjects && 1).map((item, index) => {
+            return (
+              <>
+                {item.isLocked && !isOpenLockedProjects ? (
+                  <></>
+                ) : (
+                  <WorkTitle
+                    title={item.title}
+                    dateRange={item.dateRange}
+                    isLocked={!isOpenLockedProjects && index === 0}
+                    {...props}
+                    onClick={() => {
+                      if (index === 0 && item.title === "recent work") {
+                        setIsOpenLockedPage(true);
+                      } else {
+                        //   const pathname = `/work/${item.title}`;
+                        //   return router.push(pathname);
+                      }
+                    }}
+                  />
+                )}
+              </>
+            );
+          })}
         </WorkPage>
       )}
     </>
