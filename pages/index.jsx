@@ -6,7 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import colors from "../theme/colors";
 import { pageRoutes } from "../routes/pages";
 
-export default function Home() {
+export default function Home(props) {
   const router = useRouter();
 
   return (

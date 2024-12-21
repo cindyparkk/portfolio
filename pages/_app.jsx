@@ -36,11 +36,28 @@ function MyApp({ Component, pageProps }) {
     <>
       <PageHead title={pageHeadTitle(path)} />
       {path === "/" ? (
-        <BlankHeader isDarkMode={isDarkMode} />
+        <BlankHeader
+          isDarkMode={isDarkMode}
+          isDesktopOrLaptop={isDesktopOrLaptop}
+          isTablet={isTablet}
+          isMobile={isMobile}
+        />
       ) : (
-        <Header path={path} isDarkMode={isDarkMode} />
+        <Header
+          path={path}
+          isDarkMode={isDarkMode}
+          isDesktopOrLaptop={isDesktopOrLaptop}
+          isTablet={isTablet}
+          isMobile={isMobile}
+        />
       )}
-      <Page isDarkMode={isDarkMode} padding={path.includes("/work/") && "0"}>
+      <Page
+        isDarkMode={isDarkMode}
+        padding={path.includes("/work/") && "0"}
+        isDesktopOrLaptop={isDesktopOrLaptop}
+        isTablet={isTablet}
+        isMobile={isMobile}
+      >
         <Component
           {...pageProps}
           isDarkMode={isDarkMode}
@@ -53,11 +70,22 @@ function MyApp({ Component, pageProps }) {
         path={path}
         isDarkMode={isDarkMode}
         isShowTitle={path.includes("/work/")}
+        isDesktopOrLaptop={isDesktopOrLaptop}
+        isTablet={isTablet}
+        isMobile={isMobile}
       />
-      <RightBar isDarkMode={isDarkMode} />
+      <RightBar
+        isDarkMode={isDarkMode}
+        isDesktopOrLaptop={isDesktopOrLaptop}
+        isTablet={isTablet}
+        isMobile={isMobile}
+      />
       <Footer
         isDarkMode={isDarkMode}
         onSetDarkMode={() => setIsDarkMode((state) => !state)}
+        isDesktopOrLaptop={isDesktopOrLaptop}
+        isTablet={isTablet}
+        isMobile={isMobile}
       />
     </>
   );
@@ -70,7 +98,8 @@ const BlankHeader = styled.div`
     props.isDarkMode ? colors.black : colors.beige};
   position: absolute;
   top: 0;
-  height: 60px;
+  height: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
   width: 100vw;
 `;
 
@@ -80,16 +109,21 @@ const RightBar = styled.div`
   position: absolute;
   right: 0;
   top: 0;
-  width: 60px;
+  width: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
   height: 100vh;
 `;
 
 const Page = styled.div`
   position: absolute;
-  top: 60px;
-  left: 60px;
-  bottom: 60px;
-  right: 60px;
+  top: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
+  left: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
+  bottom: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
+  right: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
   z-index: 50;
   background-color: ${(props) =>
     props.isDarkMode ? colors.black : colors.beige};

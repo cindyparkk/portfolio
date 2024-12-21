@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useRouter, usePathname } from "next/navigation";
-import { useMediaQuery } from "react-responsive";
 
 // constants
 import colors from "../../theme/colors";
@@ -10,20 +9,12 @@ import { pageRoutes } from "../../routes/pages";
 import { ReactComponent as Logo } from "../../public/logo-2024.svg";
 
 const Header = (props) => {
-  const { path, isDarkMode } = props;
+  const { path } = props;
   const router = useRouter();
 
   const onRedirectPage = (route) => {
     router.push(route, { scroll: true });
   };
-
-  const isDesktopOrLaptop = useMediaQuery({
-    query: "(min-width: 1224px)",
-  });
-  const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" });
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
-  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
-  const isRetina = useMediaQuery({ query: "(min-resolution: 2dppx)" });
 
   return (
     <HeaderBox {...props}>
@@ -37,7 +28,7 @@ const Header = (props) => {
           {pageRoutes[0].title}
         </HeaderText>
       </LogoBox>
-      <NavBox>
+      <NavBox {...props}>
         {pageRoutes.slice(1, 4).map((item) => {
           return (
             <>
@@ -65,7 +56,8 @@ export default Header;
 
 const HeaderBox = styled.div`
   width: 100%;
-  height: 60px;
+  height: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
   background-color: ${(props) =>
     props.isDarkMode ? colors.black : colors.beige};
   display: flex;
@@ -83,8 +75,9 @@ const LogoBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 40%;
-  padding-left: 60px;
+  width: 60%;
+  padding-left: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
   & > svg {
     cursor: pointer;
     max-width: 50px;
@@ -107,9 +100,10 @@ const NavBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 20%;
+  width: ${(props) => (props.isDesktopOrLaptop ? "20%" : "35%")};
   transition: 0.5s all;
-  padding-right: 60px;
+  padding-right: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
 `;
 
 const HeaderText = styled.h5`
