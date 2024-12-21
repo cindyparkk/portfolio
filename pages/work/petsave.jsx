@@ -1,29 +1,21 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 
-import { useMediaQuery } from "react-responsive";
+// constants
+import { colors } from "../../theme";
 
-export default function Petsave() {
-  const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+// comps
+import PageBanner from "../../comps/pageBanner";
+import MarginBlock from "../../comps/global/marginBlock";
+
+export default function Petsave(props) {
+  const { isDesktopOrLaptop, isTablet, isMobile } = props;
 
   return (
-    <div className="page">
-      {/* <Head>
-        <title>petSave | Cindy Park</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/logo-c.svg"></link>
-        <link
-          rel="preload"
-          href="/fonts/Kiona/Kiona-Regular.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/Metropolis/Metropolis-Black.oft"
-          as="font"
-          crossOrigin=""
-        />
-      </Head>
+    <PetSavePage>
+      <PageBanner title={"petSave"} color={colors.petsave} />
+      <MarginBlock />
+      {/* 
       <Header />
       <div className="content">
         <TopBanner imgurl="/petsave-banner.svg" bgcolor="#54BAF3" />
@@ -222,6 +214,11 @@ export default function Petsave() {
         </div>
       </div>
       <Footer /> */}
-    </div>
+    </PetSavePage>
   );
 }
+
+const PetSavePage = styled.div`
+  width: 100%;
+  height: 100%;
+`;

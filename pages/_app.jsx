@@ -2,6 +2,7 @@ import "./app.scss";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import styled from "styled-components";
+import { useMediaQuery } from "react-responsive";
 // comps
 import PageHead from "../comps/layout/pageHead";
 import Header from "../comps/layout/header";
@@ -14,6 +15,12 @@ import { pageRoutes } from "../routes/pages";
 function MyApp({ Component, pageProps }) {
   const path = usePathname();
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-width: 1224px)",
+  });
+  const isTablet = useMediaQuery({ query: "(max-width: 1224px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
   const pageHeadTitle = (pathname) => {
     let pageTitle = "";
@@ -33,8 +40,14 @@ function MyApp({ Component, pageProps }) {
       ) : (
         <Header path={path} isDarkMode={isDarkMode} />
       )}
-      <Page isDarkMode={isDarkMode} isBorder>
-        <Component {...pageProps} isDarkMode={isDarkMode} />
+      <Page isDarkMode={isDarkMode} padding={path.includes("/work/") && "0"}>
+        <Component
+          {...pageProps}
+          isDarkMode={isDarkMode}
+          isDesktopOrLaptop={isDesktopOrLaptop}
+          isTablet={isTablet}
+          isMobile={isMobile}
+        />
       </Page>
       <SideNav
         path={path}
@@ -77,17 +90,17 @@ const Page = styled.div`
   left: 60px;
   bottom: 60px;
   right: 60px;
-  z-index: 600;
+  z-index: 50;
   background-color: ${(props) =>
     props.isDarkMode ? colors.black : colors.beige};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: ${(props) => props.isBorder && `1px solid`};
-  border-color: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
+  border: 1px solid
+    ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
   overflow-y: scroll;
   overflow-x: hidden;
-  padding: 20px;
+  padding: ${(props) => (props.padding ? props.padding : "20px")};
   color: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
 `;

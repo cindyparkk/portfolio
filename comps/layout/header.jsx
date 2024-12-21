@@ -42,6 +42,7 @@ const Header = (props) => {
           return (
             <>
               <HeaderText
+                key={item.id}
                 {...props}
                 active={item.route === path}
                 onClick={() => {

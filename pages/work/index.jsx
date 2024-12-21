@@ -96,8 +96,8 @@ const Work = (props) => {
                       if (index === 0 && item.title === "recent work") {
                         setIsOpenLockedPage(true);
                       } else {
-                        //   const pathname = `/work/${item.title}`;
-                        //   return router.push(pathname);
+                        const pathname = `/work/${item.title}`;
+                        return router.push(pathname);
                       }
                     }}
                   />
