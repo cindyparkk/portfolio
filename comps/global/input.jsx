@@ -17,9 +17,9 @@ const GlobalInput = (props) => {
         }}
         onChange={(e) => {
           const {
-            target: { name, value },
+            target: { value, name },
           } = e;
-          onChange(name, value);
+          onChange(value, name);
         }}
       />
     </>

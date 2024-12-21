@@ -22,8 +22,13 @@ const Work = (props) => {
 
   const router = useRouter();
 
-  const onChange = (name, value) => {
+  const onChange = (value, key) => {
     setEnteredPassword(value);
+  };
+
+  const onKeyDown = (e) => {
+    if (e.key === "Enter") handleSubmit();
+    else return;
   };
 
   const handleSubmit = () => {
@@ -52,6 +57,7 @@ const Work = (props) => {
               error={isError}
               onChange={onChange}
               value={enteredPassword}
+              onKeyDown={onKeyDown}
             />
             <GlobalButton
               text="submit"
