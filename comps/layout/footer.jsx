@@ -12,32 +12,39 @@ import { ReactComponent as MoonIcon } from "../../public/icons/moon-icon.svg";
 import { ReactComponent as SunIcon } from "../../public/icons/sun-icon.svg";
 
 const Footer = (props) => {
-  const { onSetDarkMode, isDarkMode } = props;
+  const { onSetDarkMode, isDarkMode, isMobile } = props;
   const router = useRouter();
   return (
     <Container {...props}>
       <ButtonBox {...props}>
-        <GlobalButton
-          text={isDarkMode ? "light mode" : "dark mode"}
-          startIcon={isDarkMode ? <SunIcon /> : <MoonIcon />}
-          onClick={() => onSetDarkMode()}
-          isDark={isDarkMode}
-        />
+        {!isMobile && (
+          <GlobalButton
+            text={isDarkMode ? "light mode" : "dark mode"}
+            startIcon={isDarkMode ? <SunIcon /> : <MoonIcon />}
+            onClick={() => onSetDarkMode()}
+            isDark={isDarkMode}
+          />
+        )}
       </ButtonBox>
       <div>
         <span>copyright &copy; CINDY PARK all rights reserved.</span>
       </div>
+
       <Icons {...props}>
-        <Link href="mailto:contact@cindypark.ca">
-          <EmailIcon />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/cindypark-profile/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <LinkedInIcon />
-        </Link>
+        {!isMobile && (
+          <>
+            <Link href="mailto:contact@cindypark.ca">
+              <EmailIcon />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/cindypark-profile/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <LinkedInIcon />
+            </Link>
+          </>
+        )}
       </Icons>
     </Container>
   );

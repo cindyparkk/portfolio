@@ -8,7 +8,9 @@ const SideNav = (props) => {
   return (
     <>
       <Container {...props}>
-        {isShowTitle && <PageTitleText {...props}>{path.slice(6)}</PageTitleText>}
+        {isShowTitle && (
+          <PageTitleText {...props}>{path.slice(6)}</PageTitleText>
+        )}
       </Container>
     </>
   );
@@ -25,7 +27,8 @@ const Container = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  width: 60px;
+  width: ${(props) =>
+    props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
   height: 100vh;
 `;
 

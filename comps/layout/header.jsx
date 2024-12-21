@@ -5,11 +5,12 @@ import { useRouter, usePathname } from "next/navigation";
 // constants
 import colors from "../../theme/colors";
 import { pageRoutes } from "../../routes/pages";
-
+// SVG
 import { ReactComponent as Logo } from "../../public/logo-2024.svg";
+import { ReactComponent as HamburgerIcon } from "../../public/icons/hamburger-icon.svg";
 
 const Header = (props) => {
-  const { path } = props;
+  const { path, isMobile } = props;
   const router = useRouter();
 
   const onRedirectPage = (route) => {
@@ -28,24 +29,30 @@ const Header = (props) => {
           {pageRoutes[0].title}
         </HeaderText>
       </LogoBox>
-      <NavBox {...props}>
-        {pageRoutes.slice(1, 4).map((item) => {
-          return (
-            <>
-              <HeaderText
-                key={item.id}
-                {...props}
-                active={item.route === path}
-                onClick={() => {
-                  onRedirectPage(item.route);
-                }}
-              >
-                {item.title}
-              </HeaderText>
-            </>
-          );
-        })}
-      </NavBox>
+      {isMobile ? (
+        <div style={{ paddingRight: "30px" }}>
+          <HamburgerIcon />
+        </div>
+      ) : (
+        <NavBox {...props}>
+          {pageRoutes.slice(1, 4).map((item) => {
+            return (
+              <>
+                <HeaderText
+                  key={item.id}
+                  {...props}
+                  active={item.route === path}
+                  onClick={() => {
+                    onRedirectPage(item.route);
+                  }}
+                >
+                  {item.title}
+                </HeaderText>
+              </>
+            );
+          })}
+        </NavBox>
+      )}
     </HeaderBox>
   );
 };
@@ -80,10 +87,12 @@ const LogoBox = styled.div`
     props.isDesktopOrLaptop ? "60px" : props.isMobile ? "30px" : "50px"};
   & > svg {
     cursor: pointer;
-    max-width: 50px;
+    width: ${(props) => (props.isMobile ? "20px" : "25px")};
     height: auto;
     margin-right: 10px;
     path {
+      /* width: 100%;
+      height: auto; */
       fill: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
     }
 
@@ -113,6 +122,7 @@ const HeaderText = styled.h5`
   cursor: pointer;
   text-transform: lowercase;
   text-decoration: ${(props) => props.active && `line-through`};
+  font-size: ${(props) => props.isMobile && "18px"};
 
   &:before,
   &:after {
