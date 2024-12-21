@@ -46,7 +46,7 @@ const Container = styled.div`
   opacity: 0;
   left: 50%;
   transform: translateX(-50%);
-  animation: banner-appear 1s ease forwards;
+  animation: banner-appear 0.8s ease forwards;
   & > h1 {
     position: fixed;
     bottom: -100%;

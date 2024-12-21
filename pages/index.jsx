@@ -22,7 +22,7 @@ export default function Home() {
           </h6>
         </TopBox>
         <PageList>
-          {pageRoutes.slice(1,4).map((item) => {
+          {pageRoutes.slice(1, 4).map((item) => {
             return (
               <>
                 <PageName
@@ -43,11 +43,23 @@ export default function Home() {
 }
 
 const HomePage = styled.div`
+  @keyframes page-appear {
+    to {
+      bottom: 0px;
+      opacity: 1;
+    }
+  }
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  bottom: -100%;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: page-appear 0.8s ease forwards;
 `;
 
 const TopBox = styled.div`
@@ -62,12 +74,25 @@ const TopBox = styled.div`
 const Name = styled.h1`
   font-size: 10em;
   margin-bottom: 30px;
+  margin-top: 10px;
 `;
 
 const PageList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: end;
+  /* @keyframes text-appear {
+    to {
+      bottom: 0px;
+      opacity: 1;
+    }
+  }
+  position: fixed;
+  bottom: -100%;
+  opacity: 0;
+  right: 0px;
+  animation: text-appear 1s ease forwards;
+  animation-delay: 0.5s; */
 `;
 
 const PageName = styled.h1`
