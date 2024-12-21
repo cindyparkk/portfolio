@@ -1,5 +1,6 @@
 export const workExperiences = [
   {
+    id: 0,
     dateRange: "july 2022 — aug 2023",
     jobTitle: "Technical Manager",
     companyName: "Post-secondary Institution in Canada",
@@ -10,6 +11,7 @@ export const workExperiences = [
     ],
   },
   {
+    id: 1,
     dateRange: "mar 2021 — aug 2023",
     jobTitle: "Front-end Developer / UIUX Designer",
     companyName: "Post-secondary Institution in Canada",
