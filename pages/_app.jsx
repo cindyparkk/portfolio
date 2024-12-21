@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
       ) : (
         <Header path={path} isDarkMode={isDarkMode} />
       )}
-      <Page isDarkMode={isDarkMode} isBorder={!path.includes("/work/")}>
+      <Page isDarkMode={isDarkMode} isBorder>
         <Component {...pageProps} isDarkMode={isDarkMode} />
       </Page>
       <SideNav

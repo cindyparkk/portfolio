@@ -11,7 +11,7 @@ import SideNav from "./sideNav";
 import colors from "../../theme/colors";
 
 const PageLayout = (props) => {
-  const { pageContent, isBorder } = props;
+  const { pageContent } = props;
 
   const [isDarkMode, setIsDarkMode] = useState(false);
   const path = usePathname();
@@ -24,9 +24,7 @@ const PageLayout = (props) => {
       ) : (
         <Header path={path} isDarkMode={isDarkMode} />
       )}
-      <Page isBorder={isBorder} isDarkMode={isDarkMode}>
-        {pageContent}
-      </Page>
+      <Page isDarkMode={isDarkMode}>{pageContent}</Page>
       <SideNav path={path} isDarkMode={isDarkMode} />
       <RightBar isDarkMode={isDarkMode} />
       {/* pass out isDarkMode from footer */}
@@ -72,8 +70,8 @@ const Page = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: ${(props) => props.isBorder && `1px solid`};
-  border-color: ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
+  border: 1px solid
+    ${(props) => (props.isDarkMode ? colors.beige : colors.black)};
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 32px;
